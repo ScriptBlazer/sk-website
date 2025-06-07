@@ -70,9 +70,10 @@ firebase deploy
 ## Contact
 
 For any questions or support, please contact:
+
 - Email: info@socialklick.com
 - Hours: Sunday - Friday, 8:00 AM - 6:00 PM
 
 ## License
 
-© 2024 Social Klick. All rights reserved. 
+© 2024 Social Klick. All rights reserved.

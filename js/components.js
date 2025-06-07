@@ -134,16 +134,14 @@ document.addEventListener("DOMContentLoaded", () => {
     .split("/")
     .filter((segment) => segment !== "").length;
 
-  const prefix = "../".repeat(depth - 1); // minus 1 to stay relative to root
-
-  loadComponent("header-container", `${prefix}components/header.html`, () => {
+  loadComponent("header-container", "/components/header.html", () => {
     initializeMobileMenu();
     initializeSmoothScrolling();
     initializeHeroAnimation();
     highlightCurrentNavLink();
   });
 
-  loadComponent("footer-container", `${prefix}components/footer.html`);
+  loadComponent("footer-container", "/components/footer.html");
 });
 
 function highlightCurrentNavLink() {
