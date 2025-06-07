@@ -35,12 +35,9 @@
     --accent-color: #f07f22;
     --text-color: #ffffff;
     --light-bg: #1e1e1e;
-    --dark-bg: #2d2d30;
+    --dark-bg: #3c3b3b;
     --black-bg: black;
     --white: #121212;
-}
-
-:root {
     --font-primary: 'Montserrat', sans-serif;
     --font-secondary: 'DM Serif Text', serif;
 }
@@ -80,6 +77,12 @@ p {
     font-size: 1.1rem;
     line-height: 1.6;
     margin: 0%;
+    color: var(--secondary-color);
+}
+
+a {
+    color: var(--secondary-color);
+    text-decoration: none;
 }
 
 
@@ -576,14 +579,8 @@ in a grid use the two below */
 /* Contact Page Styles */
 .contact-hero {
     height: 40vh;
-    background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('../images/contact-bg.jpg');
-    background-size: cover;
-    background-position: center;
     display: flex;
     align-items: center;
-    justify-content: center;
-    text-align: center;
-    color: var(--text-color);
     margin-top: 60px;
 }
 
@@ -595,9 +592,8 @@ in a grid use the two below */
 }
 
 .contact-content {
-    padding: 5rem 1rem;
+    padding: 5rem 2rem;
     background-color: var(--light-bg);
-    color: var(--text-color);
 }
 
 .contact-grid {
@@ -609,37 +605,28 @@ in a grid use the two below */
 }
 
 .contact-info {
-    padding-right: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    text-align: left;
+    gap: 2rem;
 }
 
-.contact-info h2 {
-    color: var(--text-color);
-    margin-bottom: 2rem;
-    font-size: 2rem;
+.details {
+    display: flex;
+    align-items: center;
+    gap: 0.8em;
 }
 
 .info-item {
     display: flex;
-    align-items: flex-start;
     margin-bottom: 2rem;
-    gap: 1rem;
 }
 
 .info-item i {
     font-size: 1.5rem;
     color: var(--secondary-color);
-    margin-top: 0.5rem;
-}
-
-.info-item h3 {
-    color: var(--text-color);
-    margin-bottom: 0.5rem;
-}
-
-.info-item a {
-    color: var(--text-color);
-    text-decoration: none;
-    transition: color 0.3s ease;
 }
 
 .info-item a:hover {
@@ -647,15 +634,10 @@ in a grid use the two below */
 }
 
 .contact-form {
-    background-color: var(--black-bg);
+    background-color: var(--dark-bg);
     padding: 2rem;
     border-radius: 10px;
-}
-
-.contact-form h2 {
-    color: var(--text-color);
-    margin-bottom: 2rem;
-    font-size: 2rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
 .form-group {
@@ -676,7 +658,7 @@ in a grid use the two below */
     border: 1px solid #555;
     border-radius: 5px;
     font-size: 1rem;
-    background-color: #333;
+    background-color: #474747;
     color: var(--text-color);
     transition: border-color 0.3s ease;
 }
@@ -700,7 +682,7 @@ in a grid use the two below */
 }
 
 .submit-btn:hover {
-    background-color: #2980b9;
+    background-color: var(--accent-color);
 }
 
 
@@ -889,11 +871,10 @@ in a grid use the two below */
         gap: 2rem;
     }
 
-    .contact-info {
-        padding-right: 0;
-    }
-
     .contact-hero h1 {
         font-size: 2rem;
+        margin-bottom: 1rem;
+        text-transform: uppercase;
+        letter-spacing: 2px;
     }
 }
