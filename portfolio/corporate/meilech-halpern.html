@@ -5,8 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Corporate Videos - Social Klick</title>
     <link rel="stylesheet" href="../../css/styles.css">
-    <script src="../../js/components.js"></script>
-    <script src="../../js/client-videos.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
@@ -26,8 +24,8 @@
 
                     <div class="videos">
                         <h3 class="caption">Logo Animation</h3>
-                        <video controls muted playsinline>
-                            <source src="https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/client+videos/Meilech+Halpern/MH+logo+animation+landscape.mp4" type="video/mp4">
+                        <video controls playsinline preload="none" data-src="https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/client+videos/Meilech+Halpern/MH+logo+animation+landscape.mp4">
+                            <source type="video/mp4">
                             Your browser does not support the video tag.
                         </video>
                     </div>
@@ -38,8 +36,8 @@
 
                     <div class="videos">
                         <h3 class="caption">Rosh Hashana</h3>
-                        <video controls muted playsinline>
-                            <source src="https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/client+videos/Meilech+Halpern/Meilech+Rosh+ad.mp4" type="video/mp4">
+                        <video controls playsinline preload="none" data-src="https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/client+videos/Meilech+Halpern/Meilech+Rosh+ad.mp4">
+                            <source type="video/mp4">
                             Your browser does not support the video tag.
                         </video>
                     </div>
@@ -57,16 +55,16 @@
 
                     <div class="videos">
                         <h3 class="caption">Meilech 360 V2</h3>
-                        <video controls muted playsinline>
-                            <source src="https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/client+videos/Meilech+Halpern/Chalom+Reguler.mp4" type="video/mp4">
+                        <video controls playsinline preload="none" data-src="https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/client+videos/Meilech+Halpern/Chalom+Reguler.mp4">
+                            <source type="video/mp4">
                             Your browser does not support the video tag.
                         </video>
                     </div>
 
                     <div class="videos">
                         <h3 class="caption">Meilech 360 promo</h3>
-                        <video controls muted playsinline>
-                            <source src="https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/client+videos/Meilech+Halpern/Trial+2.mp4" type="video/mp4">
+                        <video controls playsinline preload="none" data-src="https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/client+videos/Meilech+Halpern/Trial+2.mp4">
+                            <source type="video/mp4">
                             Your browser does not support the video tag.
                         </video>
                     </div>
@@ -76,6 +74,9 @@
         </section>
     </main>
 
+
+    <script src="../../js/components.js"></script>
+    <script src="../../js/client-videos.js"></script>
     <div id="footer-container"></div>
 </body>
 </html> 

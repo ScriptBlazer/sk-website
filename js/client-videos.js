@@ -1,107 +1,133 @@
-document.addEventListener("DOMContentLoaded", function () {
-  // Select all video elements within containers having the class "videos"
-  // This allows the script to handle multiple video players on the page if needed.
-  const allVideos = document.querySelectorAll(".videos video");
+// Wait until the entire DOM is loaded
+document.addEventListener("DOMContentLoaded", () => {
+  // Select all video elements that have a data-src attribute (for lazy loading)
+  const lazyVideos = document.querySelectorAll("video[data-src]");
 
-  // Variable to keep track of the currently playing video, allowing us to pause others.
+  // Track the currently playing video to pause others
   let currentPlaying = null;
 
-  // Loop through each found video element to apply the desired behaviors.
-  allVideos.forEach((video) => {
-    // Flag to ensure the initial seek to 2 seconds for the thumbnail happens only once per video
-    // OR when the video has ended and reset to its thumbnail state.
+  // WeakSet to remember which videos have already been initialized (setup only once)
+  const initializedVideos = new WeakSet();
+
+  /**
+   * Loads the actual video source from data-src and starts buffering.
+   * Used to lazy-load the video only when it's near the viewport.
+   */
+  const loadVideo = (video) => {
+    const source = video.querySelector("source");
+    const dataSrc = video.getAttribute("data-src");
+    if (source && dataSrc) {
+      source.src = dataSrc; // Assign actual video source
+      video.load(); // Begin loading the video
+      video.removeAttribute("data-src"); // Prevent reloading on next scroll
+    }
+  };
+
+  /**
+   * Sets up video behaviors such as:
+   * - Thumbnail preview (seek to 2s)
+   * - Play/pause toggle on click
+   * - Reset on end
+   * - Pause other videos
+   * - Log errors
+   */
+  const setupVideo = (video) => {
+    // Prevent setting up the same video multiple times
+    if (initializedVideos.has(video)) return;
+    initializedVideos.add(video);
+
+    // Flag to avoid seeking multiple times for thumbnail
     let hasSeekedForThumbnail = false;
 
-    // Listen for the 'loadedmetadata' event.
-    // This event fires when the video's metadata (like duration, dimensions)
-    // is loaded, and it's safe to seek to a specific time.
+    // Seek to 2s to show a nice thumbnail once metadata (duration, dimensions) is ready
     video.addEventListener("loadedmetadata", function () {
       if (!hasSeekedForThumbnail) {
-        // Set the current time to 2 seconds to display that frame as a "thumbnail".
         video.currentTime = 2;
-        // Pause the video immediately after seeking to keep that frame visible.
         video.pause();
-        // Set the flag to true to indicate it's now in the thumbnail state.
         hasSeekedForThumbnail = true;
       }
     });
 
-    // Listen for the 'play' event.
-    // This event fires when the user clicks the play button (native or custom).
+    // When the video is played
     video.addEventListener("play", function () {
-      // Check if the video is starting from its initial "thumbnail" position (2 seconds).
-      // We use a small tolerance (0.1 seconds) for floating point comparisons to avoid issues.
-      // This condition ensures the video only resets to 0 if it's playing from the thumbnail state.
+      // If it started from 2s (thumbnail), restart from beginning
       if (Math.abs(this.currentTime - 2) < 0.1 && hasSeekedForThumbnail) {
-        // If it's starting from the thumbnail state, reset to 0 for actual playback.
         this.currentTime = 0;
-        // After the first play from thumbnail, set this flag to false.
-        // This prevents subsequent plays (after seeking or pausing) from resetting to 0.
         hasSeekedForThumbnail = false;
       }
 
-      // Ensure the video is unmuted when it starts playing.
-      this.muted = false;
-
-      // Pause any other video that might be currently playing.
-      allVideos.forEach((v) => {
-        if (v !== this && !v.paused) {
-          v.pause();
-        }
+      // Pause any other currently playing video
+      document.querySelectorAll(".videos video").forEach((v) => {
+        if (v !== this && !v.paused) v.pause();
       });
-      // Update the global tracker for the currently playing video.
+
       currentPlaying = this;
     });
 
-    // Listen for the 'ended' event.
-    // This event fires when the video finishes playing.
+    // When video finishes playing, return it to thumbnail preview state
     video.addEventListener("ended", function () {
-      // When the video finishes, pause it and reset its display to the 2-second mark.
-      // This prepares it for a fresh replay, showing the desired thumbnail again.
       this.currentTime = 2;
       this.pause();
-      // IMPORTANT: Set hasSeekedForThumbnail back to true.
-      // This indicates that the video is now back in its "thumbnail state"
-      // and the *next* play should start from the beginning (0 seconds).
       hasSeekedForThumbnail = true;
-      // Clear the currentPlaying tracker if this was the video that just ended.
-      if (currentPlaying === this) {
-        currentPlaying = null;
-      }
+      if (currentPlaying === this) currentPlaying = null;
     });
 
-    // Add an event listener for 'error' events during video loading or playback.
+    // Handle video errors gracefully
     video.addEventListener("error", function () {
-      console.error("Video loading error or playback issue:", this.src);
-      // In a production environment, you might display a user-friendly error message here.
+      console.error("Video error:", this.querySelector("source")?.src);
     });
 
-    // Initially, unmute the video. Note: modern browsers require user interaction to play sound.
-    video.muted = false;
-
-    // Add a click listener to each video.
-    // This will toggle play/pause and manage other videos.
+    // Toggle play/pause on video click
     video.addEventListener("click", function (e) {
-      // Prevent default click behavior (e.g., if there are overlapping links, though not applicable here).
-      e.preventDefault();
-
-      // If the clicked video is not paused (i.e., it's playing), then pause it.
+      e.preventDefault(); // Prevent default behavior (e.g., link clicks if wrapped)
       if (!this.paused) {
         this.pause();
-        // If this was the current playing video, clear the tracker.
-        if (currentPlaying === this) {
-          currentPlaying = null;
-        }
+        if (currentPlaying === this) currentPlaying = null;
       } else {
-        // If the clicked video is paused, then play it.
-        // The 'play' event listener above will handle setting currentTime to 0 (if applicable) and muting.
         this.play();
       }
     });
-  });
+  };
 
-  // Console error messages if no video elements are found, for debugging.
-  if (allVideos.length === 0) {
-    console.error("No video elements found within .videos containers.");
+  /**
+   * IntersectionObserver to:
+   * - Lazy-load videos when they are about to come into view
+   * - Pause videos that are scrolled out of view
+   */
+  if ("IntersectionObserver" in window) {
+    const observer = new IntersectionObserver(
+      (entries, observerInstance) => {
+        entries.forEach((entry) => {
+          const video = entry.target;
+
+          // Always set up the video functionality (once)
+          setupVideo(video);
+
+          if (entry.isIntersecting) {
+            // If the video is in view and has not yet been loaded, load it
+            if (video.hasAttribute("data-src")) {
+              loadVideo(video);
+            }
+          } else {
+            // Pause video when it's scrolled out of view
+            if (!video.paused) {
+              video.pause();
+            }
+          }
+        });
+      },
+      {
+        threshold: 0.25, // Consider video "visible" when 25% is in the viewport
+      }
+    );
+
+    // Start observing each lazy video
+    lazyVideos.forEach((video) => observer.observe(video));
+  } else {
+    // Fallback for old browsers: load and initialize all videos immediately
+    lazyVideos.forEach((video) => {
+      loadVideo(video);
+      setupVideo(video);
+    });
   }
 });
