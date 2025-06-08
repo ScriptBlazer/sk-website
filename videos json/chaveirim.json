@@ -2,82 +2,77 @@
   "Campaign 2025": {
     "portrait": [
       {
-        "title": "20% Reached",
+        "title": "25% Reached",
         "video": "https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/client+videos/Chaveirim/25%25.mp4",
-        "thumbnail": "../../../../images/thumbnails/Chaveirim/25%25.jpg"
+        "thumbnail": "/images/thumbnails/Chaveirim/25%25.jpg"
       },
       {
         "title": "50% Reached",
         "video": "https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/client+videos/Chaveirim/50%25.mp4",
-        "thumbnail": "../../../../images/thumbnails/Chaveirim/50%25.jpg"
+        "thumbnail": "/images/thumbnails/Chaveirim/50%25.jpg"
       },
       {
         "title": "75% Reached",
         "video": "https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/client+videos/Chaveirim/75%25.mp4",
-        "thumbnail": "../../../../images/thumbnails/Chaveirim/75%25.jpg"
+        "thumbnail": "/images/thumbnails/Chaveirim/75%25.jpg"
       },
       {
         "title": "We're Live",
         "video": "https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/client+videos/Chaveirim/We're+Live.mp4",
-        "thumbnail": "../../../../images/thumbnails/Chaveirim/We're Live.jpg"
+        "thumbnail": "/images/thumbnails/Chaveirim/We're Live.jpg"
       },
       {
-        "title": "Sign up",
+        "title": "Scenarios",
         "video": "https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/client+videos/Chaveirim/Chaveirim+scenarios+graphics+ad.mp4",
-        "thumbnail": "../../../../images/thumbnails/Chaveirim/Chaveirim scenarios graphics ad.jpg"
+        "thumbnail": "/images/thumbnails/Chaveirim/Chaveirim scenarios graphics ad.jpg"
       },
       {
-        "title": "Akiva Grunhut",
-        "video": "https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/client+videos/Chaveirim/Akiva+Grunhut.mp4",
-        "thumbnail": "../../../../images/thumbnails/Chaveirim/Akiva Grunhut.jpg"
+        "title": "Main Video",
+        "video": "https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/client+videos/Chaveirim/Main+video.mp4",
+        "thumbnail": "/images/thumbnails/Chaveirim/Main video.jpg"
       }
     ]
   },
   "Campaign 2023": {
     "portrait": [
       {
-        "title": "20% Reached",
-        "video": "https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/client+videos/Chaveirim/25%25.mp4",
-        "thumbnail": "../../../../images/thumbnails/Chaveirim/25%25.jpg"
+        "title": "50% Reached",
+        "video": "https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/client+videos/Chaveirim/50%25+2021.mp4",
+        "thumbnail": "/images/thumbnails/Chaveirim/50%25 2021.jpg"
       },
       {
-        "title": "20% Reached",
-        "video": "https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/client+videos/Chaveirim/25%25.mp4",
-        "thumbnail": "../../../../images/thumbnails/Chaveirim/25%25.jpg"
+        "title": "Cold Morning",
+        "video": "https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/client+videos/Chaveirim/Cold+morning.mp4",
+        "thumbnail": "/images/thumbnails/Chaveirim/Cold morning.jpg"
       },
       {
-        "title": "20% Reached",
-        "video": "https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/client+videos/Chaveirim/25%25.mp4",
-        "thumbnail": "../../../../images/thumbnails/Chaveirim/25%25.jpg"
+        "title": "Erev Shabbes",
+        "video": "https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/client+videos/Chaveirim/Erev+shabbes.mp4",
+        "thumbnail": "/images/thumbnails/Chaveirim/Erev shabbes.jpg"
       },
       {
-        "title": "20% Reached",
-        "video": "https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/client+videos/Chaveirim/25%25.mp4",
-        "thumbnail": "../../../../images/thumbnails/Chaveirim/25%25.jpg"
+        "title": "Motzei Shabbes",
+        "video": "https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/client+videos/Chaveirim/Motzei+shabbes+V2.mp4",
+        "thumbnail": "/images/thumbnails/Chaveirim/Motzei shabbes V2.jpg"
       },
       {
-        "title": "20% Reached",
-        "video": "https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/client+videos/Chaveirim/25%25.mp4",
-        "thumbnail": "../../../../images/thumbnails/Chaveirim/25%25.jpg"
-      },
-      {
-        "title": "20% Reached",
-        "video": "https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/client+videos/Chaveirim/25%25.mp4",
-        "thumbnail": "../../../../images/thumbnails/Chaveirim/25%25.jpg"
+        "title": "Who do you call",
+        "video": "https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/client+videos/Chaveirim/Who+do+you+call.mp4",
+        "thumbnail": "/images/thumbnails/Chaveirim/Who do you call.jpg"
       }
     ]
   },
-  "Campaign 2022": {
+  "Campaign 2021": {
     "portrait": [
       {
-        "title": "20% Reached",
-        "video": "https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/client+videos/Chaveirim/25%25.mp4",
-        "thumbnail": "../../../../images/thumbnails/Chaveirim/25%25.jpg"
+        "title": "Car Video",
+        "video": "https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/client+videos/Chaveirim/Car+video+dome.mp4",
+        "thumbnail": "/images/thumbnails/Chaveirim/Car video dome.jpg"
       },
       {
-        "title": "20% Reached",
-        "video": "https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/client+videos/Chaveirim/25%25.mp4",
-        "thumbnail": "../../../../images/thumbnails/Chaveirim/25%25.jpg"
+        "title": "Chaveirim Ad",
+        "video": "https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/client+videos/Chaveirim/Chaveirim+ad.mp4",
+        "thumbnail": "/images/thumbnails/Chaveirim/Chaveirim ad.jpg"
       }
     ]
   }

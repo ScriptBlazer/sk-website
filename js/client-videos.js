@@ -16,11 +16,82 @@ document.addEventListener("DOMContentLoaded", () => {
         Object.assign(normalizedData, data);
       }
 
-      // Get the keys in the original order they appear in the JSON
-      // No custom sorting is applied here.
-      const sortedYears = Object.keys(normalizedData);
+      // --- MODIFIED SORTING LOGIC START ---
+      const allKeys = Object.keys(normalizedData);
+      const numericKeys = [];
+      const nonNumericKeys = [];
+      const nonNumericKeyOrder = {}; // To store the original index for non-numeric keys
 
-      // Iterate over the keys in their original order
+      allKeys.forEach((key, index) => {
+        // Check if the key is composed entirely of digits
+        if (/^\d+$/.test(key)) {
+          numericKeys.push(key);
+        } else {
+          nonNumericKeys.push(key);
+          nonNumericKeyOrder[key] = index; // Store original position
+        }
+      });
+
+      // Sort numeric keys from highest to lowest
+      numericKeys.sort((a, b) => parseInt(b) - parseInt(a));
+
+      // Sort non-numeric keys by their original appearance order in the JSON
+      nonNumericKeys.sort(
+        (a, b) => nonNumericKeyOrder[a] - nonNumericKeyOrder[b]
+      );
+
+      // Combine the sorted keys.
+      // This part is the most critical for your specific requirement.
+      // We will iterate through the original keys' order to decide where to place
+      // the sorted numeric keys and the preserved non-numeric keys.
+      // This is a more complex merge to respect both internal ordering and original JSON order.
+
+      const sortedYears = [];
+      let numericIndex = 0;
+      let nonNumericIndex = 0;
+
+      // Reconstruct the order based on the original `allKeys`
+      allKeys.forEach((originalKey) => {
+        if (/^\d+$/.test(originalKey)) {
+          // If the original key was numeric, add the next highest numeric key
+          // from our sorted list. This assumes all numeric keys will eventually be consumed.
+          if (numericIndex < numericKeys.length) {
+            sortedYears.push(numericKeys[numericIndex]);
+            numericIndex++;
+          }
+        } else {
+          // If the original key was non-numeric, add the next non-numeric key
+          // from our insertion-order preserved list.
+          if (nonNumericIndex < nonNumericKeys.length) {
+            sortedYears.push(nonNumericKeys[nonNumericIndex]);
+            nonNumericIndex++;
+          }
+        }
+      });
+
+      // Handle any remaining numeric keys if the allKeys loop finishes first
+      while (numericIndex < numericKeys.length) {
+        sortedYears.push(numericKeys[numericIndex]);
+        numericIndex++;
+      }
+      // Handle any remaining non-numeric keys if the allKeys loop finishes first
+      while (nonNumericIndex < nonNumericKeys.length) {
+        sortedYears.push(nonNumericKeys[nonNumericIndex]);
+        nonNumericIndex++;
+      }
+
+      // A simpler, more reliable approach for combining, sacrificing strict inter-type insertion order
+      // but guaranteeing numeric descending and non-numeric insertion order *within their groups*.
+      // If you have "Pizza", "2023", "Chicken", "2022" in your JSON, and you want them to appear
+      // exactly in that order (Pizza, 2023, Chicken, 2022), the above complex merge is needed.
+      // However, if the numeric keys might be interspersed and you want them sorted,
+      // it's often easier to group them.
+      // Let's stick with the more robust approach that tries to preserve the inter-type order.
+      // The `allKeys.forEach` loop above is a good attempt at that.
+
+      // --- MODIFIED SORTING LOGIC END ---
+
+      // Iterate over the sorted keys
       sortedYears.forEach((year) => {
         const layouts = normalizedData[year];
         const yearSection = document.createElement("section");

@@ -1,0 +1,92 @@
+{
+  "Campaign 2024": {
+    "landscape": [
+      {
+        "title": "Main Video",
+        "video": "https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/client+videos/MARS/Mars+campaign+2024+Main+vid.mp4",
+        "thumbnail": "/images/thumbnails/MARS/Mars campaign 2024 Main vid.jpg",
+        "type": "video"
+      }
+    ],
+    "portrait": [
+      {
+        "title": "Behing the Call",
+        "video": "https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/client+videos/MARS/Behind+the+phone+call+English.mp4",
+        "thumbnail": "/images/thumbnails/MARS/Behind the phone call English.jpg",
+        "type": "video"
+        },
+        {
+        "title": "Bring Them Home",
+        "video": "https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/client+videos/MARS/Bring+them+home.mp4",
+        "thumbnail": "/images/thumbnails/MARS/Bring them home.jpg",
+        "type": "video"
+        },
+        {
+        "title": "Cant do this on my own",
+        "video": "https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/client+videos/MARS/Cant+do+this+on+my+own.mp4",
+        "thumbnail": "/images/thumbnails/MARS/Cant do this on my own.jpg",
+        "type": "video"
+      }
+    ]
+  },
+    "Campaign 2022": {
+    "landscape": [
+      {
+        "title": "Main Video",
+        "video": "https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/client+videos/MARS/Mars+campaign+2024+Main+vid.mp4",
+        "thumbnail": "/images/thumbnails/MARS/Mars campaign 2024 Main vid.jpg",
+        "type": "video"
+      }
+    ],
+    "portrait": [
+      {
+        "title": "Behing the Call",
+        "video": "https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/client+videos/MARS/Behind+the+phone+call+English.mp4",
+        "thumbnail": "/images/thumbnails/MARS/Behind the phone call English.jpg",
+        "type": "video"
+        },
+        {
+        "title": "Bring Them Home",
+        "video": "https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/client+videos/MARS/Bring+them+home.mp4",
+        "thumbnail": "/images/thumbnails/MARS/Bring them home.jpg",
+        "type": "video"
+        },
+        {
+        "title": "Cant do this on my own",
+        "video": "https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/client+videos/MARS/Cant+do+this+on+my+own.mp4",
+        "thumbnail": "/images/thumbnails/MARS/Cant do this on my own.jpg",
+        "type": "video"
+      }
+    ]
+  },
+    "Campaign 2021": {
+    "landscape": [
+      {
+        "title": "Main Video",
+        "video": "https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/client+videos/MARS/Mars+campaign+2024+Main+vid.mp4",
+        "thumbnail": "/images/thumbnails/MARS/Mars campaign 2024 Main vid.jpg",
+        "type": "video"
+      }
+    ],
+    "portrait": [
+      {
+        "title": "Behing the Call",
+        "video": "https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/client+videos/MARS/Behind+the+phone+call+English.mp4",
+        "thumbnail": "/images/thumbnails/MARS/Behind the phone call English.jpg",
+        "type": "video"
+        },
+        {
+        "title": "Bring Them Home",
+        "video": "https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/client+videos/MARS/Bring+them+home.mp4",
+        "thumbnail": "/images/thumbnails/MARS/Bring them home.jpg",
+        "type": "video"
+        },
+        {
+        "title": "Cant do this on my own",
+        "video": "https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/client+videos/MARS/Cant+do+this+on+my+own.mp4",
+        "thumbnail": "/images/thumbnails/MARS/Cant do this on my own.jpg",
+        "type": "video"
+      }
+    ]
+  }
+} 

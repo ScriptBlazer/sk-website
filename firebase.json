@@ -8,8 +8,8 @@
     ],
     "rewrites": [
       {
-        "source": "**",
-        "destination": "/index.html"
+        "source": "/404.html",
+        "destination": "/404.html"
       }
     ],
     "headers": [
@@ -18,7 +18,7 @@
         "headers": [
           {
             "key": "Cache-Control",
-            "value": "10"
+            "value": "public, max-age=2592000"
           }
         ]
       },

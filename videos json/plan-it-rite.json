@@ -2,29 +2,29 @@
   "": {
     "landscape": [
       {
-        "title": "Showroom Display",
+        "title": "Global Trips",
         "video": "https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/client+videos/Plan+it+Rite/PIR+Global+trips+Final.mp4",
-        "thumbnail": "../../../../images/thumbnails/Plan it Rite/PIR Global trips Final",
+        "thumbnail": "/images/thumbnails/Plan it Rite/PIR Global trips Final.jpg",
         "type": "video"
       }
     ],
     "portrait": [
       {
-        "title": "Sale Starting",
-        "video": "https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/client+videos/Plan+it+Rite/PiR+Peru.mp4.mp4",
-        "thumbnail": "../../../../images/thumbnails/Plan it Rite/PiR Peru",
+        "title": "Peru",
+        "video": "https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/client+videos/Plan+it+Rite/PiR+Peru.mp4",
+        "thumbnail": "/images/thumbnails/Plan it Rite/PiR Peru.jpg",
         "type": "video"
         },
         {
-        "title": "Sale Started",
+        "title": "Africa",
         "video": "https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/client+videos/Plan+it+Rite/PiR+Africa+V2.mp4",
-        "thumbnail": "../../../../images/thumbnails/Plan it Rite/PiR Africa V2",
+        "thumbnail": "/images/thumbnails/Plan it Rite/PiR Africa V2.jpg",
         "type": "video"
         },
         {
-        "title": "Few Days Left",
+        "title": "Morocco",
         "video": "https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/client+videos/Plan+it+Rite/PiR+Morocco.mp4",
-        "thumbnail": "../../../../images/thumbnails/Plan it Rite/PiR Morocco",
+        "thumbnail": "/images/thumbnails/Plan it Rite/PiR Morocco.jpg",
         "type": "video"
       }
     ]
