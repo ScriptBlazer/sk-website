@@ -16,25 +16,11 @@ document.addEventListener("DOMContentLoaded", () => {
         Object.assign(normalizedData, data);
       }
 
-      // Get the keys and sort them explicitly
-      const sortedYears = Object.keys(normalizedData).sort((a, b) => {
-        // Custom sorting logic for years and special keys
-        if (a === "") return -1; // Empty string "" always comes first
-        if (b === "") return 1; // Empty string "" always comes first
+      // Get the keys in the original order they appear in the JSON
+      // No custom sorting is applied here.
+      const sortedYears = Object.keys(normalizedData);
 
-        // For numerical years, sort in descending order
-        const numA = parseInt(a);
-        const numB = parseInt(b);
-
-        if (!isNaN(numA) && !isNaN(numB)) {
-          return numB - numA; // Sort years from newest to oldest (e.g., 2025, 2023, 2022)
-        }
-
-        // For non-numerical keys (like "Old Branding"), sort alphabetically
-        return a.localeCompare(b);
-      });
-
-      // Iterate over the sorted keys
+      // Iterate over the keys in their original order
       sortedYears.forEach((year) => {
         const layouts = normalizedData[year];
         const yearSection = document.createElement("section");

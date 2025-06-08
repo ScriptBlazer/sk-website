@@ -1,0 +1,84 @@
+{
+  "Campaign 2025": {
+    "portrait": [
+      {
+        "title": "20% Reached",
+        "video": "https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/client+videos/Chaveirim/25%25.mp4",
+        "thumbnail": "../../../../images/thumbnails/Chaveirim/25%25.jpg"
+      },
+      {
+        "title": "50% Reached",
+        "video": "https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/client+videos/Chaveirim/50%25.mp4",
+        "thumbnail": "../../../../images/thumbnails/Chaveirim/50%25.jpg"
+      },
+      {
+        "title": "75% Reached",
+        "video": "https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/client+videos/Chaveirim/75%25.mp4",
+        "thumbnail": "../../../../images/thumbnails/Chaveirim/75%25.jpg"
+      },
+      {
+        "title": "We're Live",
+        "video": "https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/client+videos/Chaveirim/We're+Live.mp4",
+        "thumbnail": "../../../../images/thumbnails/Chaveirim/We're Live.jpg"
+      },
+      {
+        "title": "Sign up",
+        "video": "https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/client+videos/Chaveirim/Chaveirim+scenarios+graphics+ad.mp4",
+        "thumbnail": "../../../../images/thumbnails/Chaveirim/Chaveirim scenarios graphics ad.jpg"
+      },
+      {
+        "title": "Akiva Grunhut",
+        "video": "https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/client+videos/Chaveirim/Akiva+Grunhut.mp4",
+        "thumbnail": "../../../../images/thumbnails/Chaveirim/Akiva Grunhut.jpg"
+      }
+    ]
+  },
+  "Campaign 2023": {
+    "portrait": [
+      {
+        "title": "20% Reached",
+        "video": "https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/client+videos/Chaveirim/25%25.mp4",
+        "thumbnail": "../../../../images/thumbnails/Chaveirim/25%25.jpg"
+      },
+      {
+        "title": "20% Reached",
+        "video": "https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/client+videos/Chaveirim/25%25.mp4",
+        "thumbnail": "../../../../images/thumbnails/Chaveirim/25%25.jpg"
+      },
+      {
+        "title": "20% Reached",
+        "video": "https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/client+videos/Chaveirim/25%25.mp4",
+        "thumbnail": "../../../../images/thumbnails/Chaveirim/25%25.jpg"
+      },
+      {
+        "title": "20% Reached",
+        "video": "https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/client+videos/Chaveirim/25%25.mp4",
+        "thumbnail": "../../../../images/thumbnails/Chaveirim/25%25.jpg"
+      },
+      {
+        "title": "20% Reached",
+        "video": "https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/client+videos/Chaveirim/25%25.mp4",
+        "thumbnail": "../../../../images/thumbnails/Chaveirim/25%25.jpg"
+      },
+      {
+        "title": "20% Reached",
+        "video": "https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/client+videos/Chaveirim/25%25.mp4",
+        "thumbnail": "../../../../images/thumbnails/Chaveirim/25%25.jpg"
+      }
+    ]
+  },
+  "Campaign 2022": {
+    "portrait": [
+      {
+        "title": "20% Reached",
+        "video": "https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/client+videos/Chaveirim/25%25.mp4",
+        "thumbnail": "../../../../images/thumbnails/Chaveirim/25%25.jpg"
+      },
+      {
+        "title": "20% Reached",
+        "video": "https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/client+videos/Chaveirim/25%25.mp4",
+        "thumbnail": "../../../../images/thumbnails/Chaveirim/25%25.jpg"
+      }
+    ]
+  }
+}

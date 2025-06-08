@@ -1,0 +1,32 @@
+{
+  "": {
+    "landscape": [
+      {
+        "title": "Showroom Display",
+        "video": "https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/client+videos/Plan+it+Rite/PIR+Global+trips+Final.mp4",
+        "thumbnail": "../../../../images/thumbnails/Plan it Rite/PIR Global trips Final",
+        "type": "video"
+      }
+    ],
+    "portrait": [
+      {
+        "title": "Sale Starting",
+        "video": "https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/client+videos/Plan+it+Rite/PiR+Peru.mp4.mp4",
+        "thumbnail": "../../../../images/thumbnails/Plan it Rite/PiR Peru",
+        "type": "video"
+        },
+        {
+        "title": "Sale Started",
+        "video": "https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/client+videos/Plan+it+Rite/PiR+Africa+V2.mp4",
+        "thumbnail": "../../../../images/thumbnails/Plan it Rite/PiR Africa V2",
+        "type": "video"
+        },
+        {
+        "title": "Few Days Left",
+        "video": "https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/client+videos/Plan+it+Rite/PiR+Morocco.mp4",
+        "thumbnail": "../../../../images/thumbnails/Plan it Rite/PiR Morocco",
+        "type": "video"
+      }
+    ]
+  }
+} 
