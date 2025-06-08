@@ -18,59 +18,20 @@
                 <br>bringing their brand to life on screen.</p>
             </div>
         </section>
-        <section class="portfolio-grid">
-            <div class="container">
-                <div class="video-grid landscape-videos">
-
-                    <div class="videos">
-                        <h3 class="caption">Showroom Display</h3>
-                        <video controls playsinline preload="none" data-src="https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/client+videos/carpet+city/Showroom+display+vid.mp4">
-                            <source type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
-                    </div>
-
-                </div>
-            </div>
-        </section>
-
         
         <section class="portfolio-grid">
-            <div class="container">
-                <div class="video-grid portrait-videos">
-
-                    <div class="videos">
-                        <h3 class="caption">Sale Starting</h3>
-                        <video controls playsinline preload="none" data-src="https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/client+videos/carpet+city/Sale+starting+tomorrow+(WA).mp4">
-                            <source type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
-                    </div>
-
-                    <div class="videos">
-                        <h3 class="caption">Sale Started</h3>
-                        <video controls playsinline preload="none" data-src="https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/client+videos/carpet+city/Sale+started+(WA).mp4">
-                            <source type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
-                    </div>
-
-                    <div class="videos">
-                        <h3 class="caption">Few Days Left</h3>
-                        <video controls playsinline preload="none" data-src="https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/Few+Days+Left!.mp4">
-                            <source type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
-                    </div>
-
-                </div>
-            </div>
+            <div class="container" id="client-videos"></div>
         </section>
     </main>
 
-
-    <script src="../../js/components.js"></script>
-    <script src="../../js/client-videos.js"></script>
-    <div id="footer-container"></div>
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('../../service-worker.js')
+            .then(() => console.log("Service Worker Registered"))
+            .catch(err => console.error("Service Worker registration failed:", err));
+        }
+    </script>
+    <script src="../../js/components.js" defer></script>
+    <script src="../../js/client-videos.js" defer></script>
 </body>
 </html> 

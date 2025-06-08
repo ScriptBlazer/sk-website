@@ -1,0 +1,37 @@
+{
+  "": {
+    "landscape1": [
+      {
+        "title": "Logo Animation",
+        "video": "https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/client+videos/Meilech+Halpern/MH+logo+animation+landscape.mp4",
+        "thumbnail": "../../../../images/thumbnails/Meilech Halpern/MH logo animation landscape.jpg",
+        "type": "video"
+      }
+    ],
+    "landscape2": [
+      {
+        "title": "Rosh Hashana",
+        "video": "https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/client+videos/Meilech+Halpern/Meilech+Rosh+ad.mp4",
+        "thumbnail": "../../../../images/thumbnails/Meilech Halpern/Meilech Rosh ad.jpg",
+        "type": "video"
+      },
+      {
+        "title": "Meilech 360",
+        "video": "https://www.youtube.com/embed/LtzP2YH5V3Q?rel=0",
+        "type": "iframe"
+      },
+      {
+        "title": "Meilech 360 V2",
+        "video": "https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/client+videos/Meilech+Halpern/Chalom+Reguler.mp4",
+        "thumbnail": "../../../../images/thumbnails/Meilech Halpern/Chalom Reguler.jpg",
+        "type": "video"
+      },
+      {
+        "title": "Meilech 360 promo",
+        "video": "https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/client+videos/Meilech+Halpern/Trial+2.mp4",
+        "thumbnail": "../../../../images/thumbnails/Meilech Halpern/Trial 2.jpg",
+        "type": "video"
+      }
+    ]
+  }
+}

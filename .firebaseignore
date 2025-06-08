@@ -2,3 +2,4 @@
 firebase.json
 **/node_modules/
 **/.git/
+aws-key.text

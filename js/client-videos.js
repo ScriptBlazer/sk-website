@@ -1,133 +1,201 @@
-// Wait until the entire DOM is loaded
 document.addEventListener("DOMContentLoaded", () => {
-  // Select all video elements that have a data-src attribute (for lazy loading)
-  const lazyVideos = document.querySelectorAll("video[data-src]");
+  const container = document.getElementById("client-videos");
 
-  // Track the currently playing video to pause others
-  let currentPlaying = null;
+  const filename = window.location.pathname.split("/").pop().split(".")[0];
+  const jsonPath = `../../videos json/${filename}.json`;
 
-  // WeakSet to remember which videos have already been initialized (setup only once)
-  const initializedVideos = new WeakSet();
+  fetch(jsonPath)
+    .then((res) => res.json())
+    .then((data) => {
+      const normalizedData = {};
 
-  /**
-   * Loads the actual video source from data-src and starts buffering.
-   * Used to lazy-load the video only when it's near the viewport.
-   */
-  const loadVideo = (video) => {
-    const source = video.querySelector("source");
-    const dataSrc = video.getAttribute("data-src");
-    if (source && dataSrc) {
-      source.src = dataSrc; // Assign actual video source
-      video.load(); // Begin loading the video
-      video.removeAttribute("data-src"); // Prevent reloading on next scroll
-    }
-  };
-
-  /**
-   * Sets up video behaviors such as:
-   * - Thumbnail preview (seek to 2s)
-   * - Play/pause toggle on click
-   * - Reset on end
-   * - Pause other videos
-   * - Log errors
-   */
-  const setupVideo = (video) => {
-    // Prevent setting up the same video multiple times
-    if (initializedVideos.has(video)) return;
-    initializedVideos.add(video);
-
-    // Flag to avoid seeking multiple times for thumbnail
-    let hasSeekedForThumbnail = false;
-
-    // Seek to 2s to show a nice thumbnail once metadata (duration, dimensions) is ready
-    video.addEventListener("loadedmetadata", function () {
-      if (!hasSeekedForThumbnail) {
-        video.currentTime = 2;
-        video.pause();
-        hasSeekedForThumbnail = true;
+      const isFlatStructure = data.landscape || data.portrait;
+      if (isFlatStructure) {
+        normalizedData[""] = data;
+      } else {
+        Object.assign(normalizedData, data);
       }
+
+      Object.entries(normalizedData)
+        .sort(([a], [b]) => b.localeCompare(a)) // sort years descending
+        .forEach(([year, layouts]) => {
+          const yearSection = document.createElement("section");
+          yearSection.className = "year-section";
+
+          if (year) {
+            const yearHeading = document.createElement("h2");
+            yearHeading.textContent = year;
+            yearSection.appendChild(yearHeading);
+          }
+
+          Object.keys(layouts).forEach((layout) => {
+            if (!layouts[layout]) return;
+
+            const grid = document.createElement("div");
+
+            const baseLayout = layout.replace(/[0-9]/g, "");
+            grid.className = `video-grid ${baseLayout}-videos ${layout}-videos`;
+
+            if (Array.isArray(layouts[layout])) {
+              layouts[layout].forEach((item, index) => {
+                const wrapper = document.createElement("div");
+                wrapper.className = "videos";
+
+                let caption = null;
+                if (
+                  item.title &&
+                  !(index === 0 && year === "" && isFlatStructure)
+                ) {
+                  caption = document.createElement("h3");
+                  caption.className = "caption";
+                  caption.textContent = item.title;
+                }
+
+                if (item.type === "iframe") {
+                  const iframe = document.createElement("iframe");
+                  iframe.src = item.video;
+                  iframe.setAttribute("title", item.title);
+                  iframe.setAttribute("frameborder", "0");
+                  iframe.setAttribute("allowfullscreen", true);
+                  iframe.setAttribute(
+                    "allow",
+                    "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  );
+                  if (caption) wrapper.appendChild(caption);
+                  wrapper.appendChild(iframe);
+                } else {
+                  const videoWrapper = document.createElement("div");
+                  videoWrapper.className = "video-wrapper";
+                  videoWrapper.style.position = "relative";
+
+                  const video = document.createElement("video");
+                  video.className = "custom-video";
+                  video.setAttribute("playsinline", "");
+                  video.setAttribute("preload", "none");
+                  video.setAttribute("poster", item.thumbnail);
+                  video.setAttribute("data-src", item.video);
+                  video.muted = false;
+
+                  const source = document.createElement("source");
+                  source.type = "video/mp4";
+                  video.appendChild(source);
+                  video.append("Your browser does not support the video tag.");
+
+                  const muteIcon = document.createElement("img");
+                  muteIcon.className = "mute-toggle";
+                  muteIcon.src = "/images/misc/music_note_icon.png";
+                  muteIcon.alt = "Toggle Mute";
+                  muteIcon.style.opacity = "1";
+
+                  const timeline = document.createElement("input");
+                  timeline.type = "range";
+                  timeline.className = "video-timeline";
+                  timeline.min = 0;
+                  timeline.value = 0;
+                  timeline.step = 0.01;
+
+                  video.addEventListener("timeupdate", () => {
+                    timeline.max = video.duration || 1;
+                    timeline.value = video.currentTime;
+                  });
+
+                  timeline.addEventListener("input", () => {
+                    video.currentTime = timeline.value;
+                  });
+
+                  muteIcon.addEventListener("click", (e) => {
+                    e.stopPropagation();
+                    video.muted = !video.muted;
+                    muteIcon.style.opacity = video.muted ? "0.7" : "1";
+                  });
+
+                  videoWrapper.appendChild(video);
+                  videoWrapper.appendChild(timeline);
+                  videoWrapper.appendChild(muteIcon);
+
+                  if (caption) wrapper.appendChild(caption);
+                  wrapper.appendChild(videoWrapper);
+                }
+
+                grid.appendChild(wrapper);
+              });
+
+              yearSection.appendChild(grid);
+              yearSection.appendChild(document.createElement("br"));
+            }
+          });
+
+          container.appendChild(yearSection);
+        });
+
+      initializeLazyVideos();
+    })
+    .catch((err) => {
+      console.error("❌ Could not load video JSON:", err);
     });
 
-    // When the video is played
-    video.addEventListener("play", function () {
-      // If it started from 2s (thumbnail), restart from beginning
-      if (Math.abs(this.currentTime - 2) < 0.1 && hasSeekedForThumbnail) {
-        this.currentTime = 0;
-        hasSeekedForThumbnail = false;
-      }
+  function initializeLazyVideos() {
+    const lazyVideos = document.querySelectorAll("video[data-src]");
+    let currentPlaying = null;
+    const initializedVideos = new WeakSet();
 
-      // Pause any other currently playing video
-      document.querySelectorAll(".videos video").forEach((v) => {
-        if (v !== this && !v.paused) v.pause();
+    const loadVideo = (video) => {
+      const source = video.querySelector("source");
+      const dataSrc = video.getAttribute("data-src");
+      if (source && dataSrc) {
+        source.src = dataSrc;
+        video.load();
+        video.removeAttribute("data-src");
+      }
+    };
+
+    const setupVideo = (video) => {
+      if (initializedVideos.has(video)) return;
+      initializedVideos.add(video);
+
+      video.addEventListener("play", function () {
+        document.querySelectorAll(".videos video").forEach((v) => {
+          if (v !== this && !v.paused) v.pause();
+        });
+        currentPlaying = this;
       });
 
-      currentPlaying = this;
-    });
-
-    // When video finishes playing, return it to thumbnail preview state
-    video.addEventListener("ended", function () {
-      this.currentTime = 2;
-      this.pause();
-      hasSeekedForThumbnail = true;
-      if (currentPlaying === this) currentPlaying = null;
-    });
-
-    // Handle video errors gracefully
-    video.addEventListener("error", function () {
-      console.error("Video error:", this.querySelector("source")?.src);
-    });
-
-    // Toggle play/pause on video click
-    video.addEventListener("click", function (e) {
-      e.preventDefault(); // Prevent default behavior (e.g., link clicks if wrapped)
-      if (!this.paused) {
-        this.pause();
+      video.addEventListener("ended", function () {
         if (currentPlaying === this) currentPlaying = null;
-      } else {
-        this.play();
-      }
-    });
-  };
+      });
 
-  /**
-   * IntersectionObserver to:
-   * - Lazy-load videos when they are about to come into view
-   * - Pause videos that are scrolled out of view
-   */
-  if ("IntersectionObserver" in window) {
-    const observer = new IntersectionObserver(
-      (entries, observerInstance) => {
-        entries.forEach((entry) => {
-          const video = entry.target;
+      video.addEventListener("error", function () {
+        console.error("Video error:", this.querySelector("source")?.src);
+      });
 
-          // Always set up the video functionality (once)
-          setupVideo(video);
+      video.addEventListener("click", function (e) {
+        e.preventDefault();
+        this.paused ? this.play() : this.pause();
+      });
+    };
 
-          if (entry.isIntersecting) {
-            // If the video is in view and has not yet been loaded, load it
-            if (video.hasAttribute("data-src")) {
-              loadVideo(video);
+    if ("IntersectionObserver" in window) {
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            const video = entry.target;
+            setupVideo(video);
+            if (entry.isIntersecting) {
+              if (video.hasAttribute("data-src")) loadVideo(video);
+            } else {
+              if (!video.paused) video.pause();
             }
-          } else {
-            // Pause video when it's scrolled out of view
-            if (!video.paused) {
-              video.pause();
-            }
-          }
-        });
-      },
-      {
-        threshold: 0.25, // Consider video "visible" when 25% is in the viewport
-      }
-    );
+          });
+        },
+        { threshold: 0.25 }
+      );
 
-    // Start observing each lazy video
-    lazyVideos.forEach((video) => observer.observe(video));
-  } else {
-    // Fallback for old browsers: load and initialize all videos immediately
-    lazyVideos.forEach((video) => {
-      loadVideo(video);
-      setupVideo(video);
-    });
+      lazyVideos.forEach((video) => observer.observe(video));
+    } else {
+      lazyVideos.forEach((video) => {
+        loadVideo(video);
+        setupVideo(video);
+      });
+    }
   }
 });

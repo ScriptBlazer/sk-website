@@ -18,7 +18,7 @@
                 <br>with vibrant visuals and a rhythm that matches his unique sound.</p>
             </div>
         </section>
-        <section class="portfolio-grid">
+        <!-- <section class="portfolio-grid">
             <div class="container">
                 <div class="video-grid landscape-videos">
 
@@ -71,12 +71,22 @@
 
                 </div>
             </div>
+        </section> -->
+
+        <section class="portfolio-grid">
+            <div class="container" id="client-videos"></div>
         </section>
     </main>
 
-
-    <script src="../../js/components.js"></script>
-    <script src="../../js/client-videos.js"></script>
     <div id="footer-container"></div>
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('../../service-worker.js')
+            .then(() => console.log("Service Worker Registered"))
+            .catch(err => console.error("Service Worker registration failed:", err));
+        }
+    </script>
+    <script src="../../js/components.js" defer></script>
+    <script src="../../js/client-videos.js" defer></script>
 </body>
 </html> 

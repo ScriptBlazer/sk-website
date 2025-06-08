@@ -335,6 +335,7 @@ footer {
 }
 
 .explore-button {
+    background-color: #000;
     display: inline-block;
     padding: 1rem 2rem;
     background-color: none;
@@ -520,12 +521,82 @@ footer {
 
 .video-grid iframe{
     width: 100%;
+    min-height: 283px;
     max-height: 283px;
     object-fit: cover;
     border: 2px solid white;
     box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
 }
 
+.video-wrapper {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+/* Keep video styles as-is */
+.custom-video {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border: 2px solid white;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+  display: block;
+}
+
+/* Music note icon in corner */
+.mute-toggle {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+  z-index: 10;
+}
+
+.mute-toggle:hover {
+  opacity: 1;
+}
+
+/* Position slider OVER the bottom of the video */
+.video-timeline {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  appearance: none;
+  background: #ddd;
+  accent-color: white;
+  border-radius: 2px;
+  cursor: pointer;
+  z-index: 5;
+}
+
+/* Chrome/Safari thumb */
+.video-timeline::-webkit-slider-thumb {
+  appearance: none;
+  width: 12px;
+  height: 12px;
+  background: white;
+  border-radius: 50%;
+  border: none;
+  margin-top: -4px;
+}
+
+/* Firefox thumb */
+.video-timeline::-moz-range-thumb {
+  width: 12px;
+  height: 12px;
+  background: white;
+  border-radius: 50%;
+  border: none;
+}
 /* GRID LAYOUT CENTERED
 If you want the videos to always
 center use the three below */
@@ -611,6 +682,7 @@ in a grid use the two below */
     align-items: flex-start;
     text-align: left;
     gap: 2rem;
+    margin-left: 40px;
 }
 
 .details {
@@ -860,6 +932,14 @@ in a grid use the two below */
         min-width: 0px;
     }
 
+    .video-grid {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 2rem;
+        padding: 1.2rem;
+    }
+
 
 
     /* ---------------------------------------- */
@@ -876,5 +956,15 @@ in a grid use the two below */
         margin-bottom: 1rem;
         text-transform: uppercase;
         letter-spacing: 2px;
+    }
+
+    .contact-info {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        margin-left: 0px;
     }
 }

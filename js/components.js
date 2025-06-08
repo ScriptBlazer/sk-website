@@ -139,11 +139,22 @@ document.addEventListener("DOMContentLoaded", () => {
     initializeSmoothScrolling();
     initializeHeroAnimation();
     highlightCurrentNavLink();
+
+    // Prefetch links after header is loaded
+    document.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("mouseover", () => {
+        const prefetchLink = document.createElement("link");
+        prefetchLink.rel = "prefetch";
+        prefetchLink.href = link.href;
+        document.head.appendChild(prefetchLink);
+      });
+    });
   });
 
   loadComponent("footer-container", "/components/footer.html");
 });
 
+// Adds "active" class to the nav link that matches the current page URL
 function highlightCurrentNavLink() {
   const currentPage = window.location.pathname.split("/").pop() || "index.html";
   const navLinks = document.querySelectorAll(".nav-links a");

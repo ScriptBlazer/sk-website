@@ -1,0 +1,65 @@
+{
+  "": {
+    "portrait": [
+      {
+        "title": "Sukkot Whisky Ad",
+        "video": "https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/client+videos/grapevine/Grapevine+Sukkot+2024.mp4",
+        "thumbnail": ""
+      },
+      {
+        "title": "Spirit of Sale",
+        "video": "https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/client+videos/grapevine/Spirit+of+Sale.mp4",
+        "thumbnail": ""
+      },
+      {
+        "title": "Real Experience",
+        "video": "https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/client+videos/grapevine/Real+experience.mp4",
+        "thumbnail": ""
+      },
+      {
+        "title": "Wine for Less",
+        "video": "https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/client+videos/grapevine/More+wine+for+less.mp4",
+        "thumbnail": ""
+      },
+      {
+        "title": "Mega Offers",
+        "video": "https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/client+videos/grapevine/Mega+offers.mp4",
+        "thumbnail": ""
+      },
+      {
+        "title": "Weekend Offers",
+        "video": "https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/client+videos/grapevine/Weekend+offers.mp4",
+        "thumbnail": ""
+      },
+      {
+        "title": "Grand Opening",
+        "video": "https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/client+videos/grapevine/Grand+Openning.mp4",
+        "thumbnail": ""
+      }
+    ]
+  },
+  "Old Branding": {
+    "portrait": [
+      {
+        "title": "Purim Arrangements",
+        "video": "https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/client+videos/grapevine/Grapevine+Arrangements.mp4",
+        "thumbnail": ""
+      },
+      {
+        "title": "Purim Wine Ad",
+        "video": "https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/client+videos/grapevine/Grapevine+Wine.mp4",
+        "thumbnail": ""
+      },
+      {
+        "title": "Purim Wine Ad",
+        "video": "https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/client+videos/grapevine/Wine+Ad.mp4",
+        "thumbnail": ""
+      },
+      {
+        "title": "Purim Arrangements",
+        "video": "https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/client+videos/grapevine/Final+Ad+Arrangements.mp4",
+        "thumbnail": ""
+      }
+    ]
+  }
+}
