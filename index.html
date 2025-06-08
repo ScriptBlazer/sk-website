@@ -75,20 +75,20 @@
                                 <h3>10+ Years Experience</h3>
                                 <p>Benefit from a decade of expertise in delivering high-quality video production.</p>
                             </div>
-                            <div class="feature-item">
+                            <!-- <div class="feature-item">
                                 <span class="material-symbols-outlined">
                                     verified
                                     </span>
                                 <h3>High-End Quality</h3>
                                 <p>We use the latest equipment and techniques to produce stunning visual content.</p>
-                            </div>
-                            <div class="feature-item">
+                            </div> -->
+                            <!-- <div class="feature-item">
                                 <span class="material-symbols-outlined">
                                     local_shipping
                                     </span>
                                 <h3>Efficient Delivery</h3>
                                 <p>We are committed to timely project completion without compromising quality.</p>
-                            </div>
+                            </div> -->
                             <div class="feature-item">
                                 <span class="material-symbols-outlined">
                                     shoppingmode
@@ -106,9 +106,26 @@
     <div id="footer-container"></div>
     <script>
         if ('serviceWorker' in navigator) {
-            navigator.serviceWorker.register('/service-worker.js')
-            .then(() => console.log("Service Worker Registered"))
-            .catch(err => console.error("Service Worker registration failed:", err));
+        navigator.serviceWorker.getRegistrations().then((registrations) => {
+            console.log('found', registrations.length, 'registration(s)');
+            if (registrations.length === 0) {
+            console.log('No service workers registered.');
+            }
+            registrations.forEach((registration, i) => {
+            registration.unregister().then((success) => {
+                console.log(`[${i}] Service Worker unregistered:`, success);
+                caches.keys().then((cacheNames) => {
+                cacheNames.forEach((cacheName) => {
+                    caches.delete(cacheName).then((deleted) => {
+                    console.log(`Cache '${cacheName}' deleted:`, deleted);
+                    });
+                });
+                });
+            }).catch((err) => {
+                console.error(`❌ Failed to unregister [${i}]`, err);
+            });
+            });
+        });
         }
     </script>
     <script src="js/hero-animation.js" defer></script>

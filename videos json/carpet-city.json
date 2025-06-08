@@ -4,7 +4,7 @@
       {
         "title": "Showroom Display",
         "video": "https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/client+videos/carpet+city/Showroom+display+vid.mp4",
-        "thumbnail": "../../../../images/thumbnails/Carpet City/Showroom Display.jpg",
+        "thumbnail": "../../../../images/thumbnails/Carpet City/Showroom display vid Jtrade.jpg",
         "type": "video"
       }
     ]
@@ -14,19 +14,19 @@
       {
         "title": "Sale Starting",
         "video": "https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/client+videos/carpet+city/Sale+starting+tomorrow+(WA).mp4",
-        "thumbnail": "../../../../images/thumbnails/Carpet City/Sale Starting.jpg",
+        "thumbnail": "../../../../images/thumbnails/Carpet City/Sale starting.jpg",
         "type": "video"
         },
         {
         "title": "Sale Started",
         "video": "https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/client+videos/carpet+city/Sale+started+(WA).mp4",
-        "thumbnail": "../../../../images/thumbnails/Carpet City/Sale Started.jpg",
+        "thumbnail": "../../../../images/thumbnails/Carpet City/Sale started.jpg",
         "type": "video"
         },
         {
         "title": "Few Days Left",
         "video": "https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/Few+Days+Left!.mp4",
-        "thumbnail": "../../../../images/thumbnails/Carpet City/Few Days Left.jpg",
+        "thumbnail": "../../../../images/thumbnails/Carpet City/Few days left.jpg",
         "type": "video"
       }
     ]

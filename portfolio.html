@@ -46,7 +46,7 @@
             </div>
           </a>
 
-          <!-- WhatsApp -->
+                    <!-- WhatsApp -->
           <a href="portfolio/whatsapp-videos.html">
             <div class="category-image">
               <video class="desktop-video" autoplay loop muted playsinline>
@@ -61,6 +61,8 @@
             </div>
           </a>
 
+          
+
 
         </div>
       </div>
@@ -70,9 +72,26 @@
   <div id="footer-container"></div>
     <script>
         if ('serviceWorker' in navigator) {
-            navigator.serviceWorker.register('/service-worker.js')
-            .then(() => console.log("Service Worker Registered"))
-            .catch(err => console.error("Service Worker registration failed:", err));
+        navigator.serviceWorker.getRegistrations().then((registrations) => {
+            console.log('found', registrations.length, 'registration(s)');
+            if (registrations.length === 0) {
+            console.log('No service workers registered.');
+            }
+            registrations.forEach((registration, i) => {
+            registration.unregister().then((success) => {
+                console.log(`[${i}] Service Worker unregistered:`, success);
+                caches.keys().then((cacheNames) => {
+                cacheNames.forEach((cacheName) => {
+                    caches.delete(cacheName).then((deleted) => {
+                    console.log(`Cache '${cacheName}' deleted:`, deleted);
+                    });
+                });
+                });
+            }).catch((err) => {
+                console.error(`❌ Failed to unregister [${i}]`, err);
+            });
+            });
+        });
         }
     </script>
     <script src="js/components.js" defer></script>
