@@ -516,7 +516,7 @@ footer {
 
 /* Video styling */
 .portfolio-grid {
-  padding: 2.5rem 1rem;
+  padding: 1rem 1rem;
 }
 
 .video-grid video{
@@ -571,6 +571,29 @@ footer {
   opacity: 1;
 }
 
+.fullscreen-toggle {
+    font-size: 2.3rem !important;
+    position: absolute;
+    cursor: pointer;
+    bottom: 1px;
+    left: 1px;
+    padding: 5px;
+    border-radius: 5px;
+}
+.fullscreen-toggle .material-symbols-outlined {
+    font-variation-settings: 
+      'FILL' 1,
+      'wght' 700,
+      'GRAD' 0,
+      'opsz' 28 !important;
+    font-size: 2rem !important;
+}
+
+
+.fullscreen-toggle {
+    transform: scale(1.03);
+}
+
 /* Position slider OVER the bottom of the video */
 .video-timeline {
   position: absolute;
@@ -622,6 +645,14 @@ center use the three below */
 
 .landscape-videos .videos {
     flex: 0 1 500px;
+}
+
+.year-section {
+    margin-top: 6rem;
+}
+
+.caption {
+    margin-top: 2rem;
 }
 
 /* GRID LAYOUT CLEAN
@@ -941,6 +972,9 @@ in a grid use the two below */
         justify-content: center;
         gap: 2rem;
         padding: 1.2rem;
+    }
+    .year-section {
+        margin-top: 5rem;
     }
 
 

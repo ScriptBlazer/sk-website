@@ -1,0 +1,44 @@
+{
+  "": {
+    "landscape": [
+      {
+        "title": "Stay Vigilant",
+        "video": "https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/client+videos/Shomrim/Shomim+campaign+2025+Main+video.mp4",
+        "thumbnail": "/images/thumbnails/Shomrim/Shomim campaign 2025 Main video.jpg",
+        "type": "video"
+      }
+    ],
+    "portrait": [
+      {
+        "title": "Teaser",
+        "video": "https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/client+videos/Shomrim/Shomrim+Status+Teaser.mp4",
+        "thumbnail": "/images/thumbnails/Shomrim/Shomrim Status Teaser.jpg",
+        "type": "video"
+        },
+        {
+        "title": "Chaim Hochhauser",
+        "video": "https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/client+videos/Shomrim/Chaim+Hochhauser+Status.mp4",
+        "thumbnail": "/images/thumbnails/Shomrim/Chaim Hochhauser Status.jpg",
+        "type": "video"
+        },
+        {
+        "title": "We are live",
+        "video": "https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/client+videos/Shomrim/We+are+live.mp4",
+        "thumbnail": "/images/thumbnails/Shomrim/We are live.jpg",
+        "type": "video"
+        },
+        {
+        "title": "90% Reached",
+        "video": "https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/client+videos/Shomrim/90%25+Reached.mp4",
+        "thumbnail": "/images/thumbnails/Shomrim/90%25 Reached.jpg",
+        "type": "video"
+        },
+        {
+        "title": "Thank You",
+        "video": "https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/client+videos/Shomrim/Thank+you.mp4",
+        "thumbnail": "/images/thumbnails/Shomrim/Thank you.jpg",
+        "type": "video"
+      }
+    ]
+  }
+} 

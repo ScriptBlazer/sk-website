@@ -1,0 +1,26 @@
+{
+  "":   {
+    "portrait": [
+            {
+                "title": "Burnt Building",
+                "video": "https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/client+videos/Belze+98/Burnt+building.mp4",
+                "thumbnail": "/images/thumbnails/Belze 98/Burnt building.jpg"
+            },
+            {
+                "title": "A Gute Voch",
+                "video": "https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/client+videos/Belze+98/A+lechtige+voch.mp4",
+                "thumbnail": "/images/thumbnails/Belze 98/A lechtige voch.jpg"
+            },
+            {
+                "title": "New Hall",
+                "video": "https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/client+videos/Belze+98/New+hall.mp4",
+                "thumbnail": "/images/thumbnails/Belze 98/New hall.jpg"
+            },
+            {
+                "title": "25% Reached",
+                "video": "https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/client+videos/Belze+98/25%25.mp4",
+                "thumbnail": "/images/thumbnails/Belze 98/25%25.jpg"
+            }
+        ]
+    }
+}

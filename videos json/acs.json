@@ -1,0 +1,38 @@
+{
+  "": {
+    "landscape": [
+      {
+        "title": "Global Trips",
+        "video": "https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/client+videos/ACS/Isri+Chag.mp4",
+        "thumbnail": "/images/thumbnails/ACS/Isri Chag.jpg",
+        "type": "video"
+      }
+    ],
+    "portrait": [
+      {
+        "title": "Monthly Statistics",
+        "video": "https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/client+videos/ACS/ACS+Monthly+Statistics+April.mp4",
+        "thumbnail": "/images/thumbnails/ACS/ACS Monthly Statistics April.jpg",
+        "type": "video"
+        },
+        {
+        "title": "Hatzlucha",
+        "video": "https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/client+videos/ACS/Hatzlucha+ad.mp4",
+        "thumbnail": "/images/thumbnails/ACS/Hatzlucha ad.jpg",
+        "type": "video"
+        },
+        {
+        "title": "Hope",
+        "video": "https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/client+videos/ACS/Status+ad+2021+with+NLE.mp4",
+        "thumbnail": "/images/thumbnails/ACS/Status ad 2021 with NLE.jpg",
+        "type": "video"
+        },
+        {
+        "title": "Entertainers",
+        "video": "https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/client+videos/ACS/Entertainers+ad.mp4",
+        "thumbnail": "/images/thumbnails/ACS/Entertainers ad.jpg",
+        "type": "video"
+      }
+    ]
+  }
+} 

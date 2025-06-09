@@ -126,34 +126,6 @@ function initializeHeroAnimation() {
   }
 }
 
-// Load header and footer when the DOM is ready
-document.addEventListener("DOMContentLoaded", () => {
-  console.log("Components loaded");
-  const currentPath = window.location.pathname;
-  const depth = window.location.pathname
-    .split("/")
-    .filter((segment) => segment !== "").length;
-
-  loadComponent("header-container", "/components/header.html", () => {
-    initializeMobileMenu();
-    initializeSmoothScrolling();
-    initializeHeroAnimation();
-    highlightCurrentNavLink();
-
-    // Prefetch links after header is loaded
-    document.querySelectorAll("a").forEach((link) => {
-      link.addEventListener("mouseover", () => {
-        const prefetchLink = document.createElement("link");
-        prefetchLink.rel = "prefetch";
-        prefetchLink.href = link.href;
-        document.head.appendChild(prefetchLink);
-      });
-    });
-  });
-
-  loadComponent("footer-container", "/components/footer.html");
-});
-
 // Adds "active" class to the nav link that matches the current page URL
 function highlightCurrentNavLink() {
   const currentPage = window.location.pathname.split("/").pop() || "index.html";
@@ -164,5 +136,187 @@ function highlightCurrentNavLink() {
     if (href === currentPage) {
       link.classList.add("active");
     }
+  });
+}
+
+// --- Predictive Preloading Logic ---
+
+// Map of page paths to an array of critical assets to preload for that page
+// Use absolute paths (starting with '/') for consistency.
+const pageAssetsToPreload = {
+  "/portfolio.html": [
+    // Added for the main portfolio page
+    "https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/sk-website-page-vids/Corporate+reel.mp4",
+    "https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/sk-website-page-vids/Charity+reel.mp4",
+    "https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/sk-website-page-vids/Whatsapp+reel.mp4",
+    "https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/sk-website-page-vids/Corporate+reel+landscape.mp4", // Add landscape versions if applicable
+    "https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/sk-website-page-vids/Charity+reel+landscape.mp4",
+    "https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/sk-website-page-vids/Whatsapp+reel+landscape.mp4",
+  ],
+  "/portfolio/corporate.html": [
+    "/images/client-logos/corporate/Carpet City.png",
+    "/images/client-logos/corporate/Grapevine.png",
+    "/images/client-logos/corporate/JTrade.png",
+    "/images/client-logos/corporate/Meilech Halpern.png",
+    "/images/client-logos/corporate/Keepout.png",
+    "/images/client-logos/corporate/Plan it Rite.png",
+  ],
+  "/portfolio/charity.html": [
+    "/images/client-logos/charity/ACS.png",
+    "/images/client-logos/charity/Belze.png",
+    "/images/client-logos/charity/Chaveirim.png",
+    "/images/client-logos/charity/Hatzoloh.png",
+    "/images/client-logos/charity/JHBJ.png",
+    "/images/client-logos/charity/Kol Boniach.png",
+    "/images/client-logos/charity/MARS.png",
+    "/images/client-logos/charity/Oraysa.png",
+    "/images/client-logos/charity/SBS.png",
+    "/images/client-logos/charity/Tikvatenoe.png",
+  ],
+  "/portfolio/whatsappvideos.html": [
+    // IMPORTANT: Add the specific logo/thumbnail paths for whatsappvideos.html here.
+    // Example: '/images/client-logos/whatsapp/some-whatsapp-logo.png',
+  ],
+};
+
+// Use a Set to keep track of pages for which assets have already been preloaded
+const preloadedPages = new Set();
+
+/**
+ * Handles the mouseover event on a link to trigger preloading of the destination page's assets.
+ * @param {Event} event The mouseover event object.
+ */
+function handleLinkHover(event) {
+  const linkElement = event.currentTarget; // The <a> tag that was hovered over
+  let href = linkElement.getAttribute("href");
+
+  // Convert relative href to an absolute path for consistent matching with pageAssetsToPreload keys
+  // Example: 'portfolio/corporate.html' becomes '/portfolio/corporate.html' if index.html is at root
+  if (href && !href.startsWith("/") && !href.startsWith("http")) {
+    const currentPath = window.location.pathname;
+    const currentDirectory = currentPath.substring(
+      0,
+      currentPath.lastIndexOf("/") + 1
+    ); // Ensure trailing slash
+    try {
+      href = new URL(href, window.location.origin + currentDirectory).pathname;
+    } catch (e) {
+      console.error("Error resolving relative URL for preloading:", e);
+      return; // Exit if URL is invalid
+    }
+  }
+
+  // Check if we have assets to preload for this href and haven't preloaded them yet
+  if (href && pageAssetsToPreload[href] && !preloadedPages.has(href)) {
+    const assetsToPreload = pageAssetsToPreload[href];
+    const head = document.head;
+
+    assetsToPreload.forEach((assetUrl) => {
+      // Check if the asset is already in the DOM (e.g., from a static preload tag on a previous page)
+      if (!document.querySelector(`link[rel="preload"][href="${assetUrl}"]`)) {
+        const link = document.createElement("link");
+        link.rel = "preload";
+        link.as =
+          assetUrl.endsWith(".mp4") || assetUrl.endsWith(".webm")
+            ? "video"
+            : "image"; // Determine type based on extension
+        link.href = assetUrl;
+        // Add media queries if you have responsive versions for these specific assets
+        // Example: link.media = "(max-width: 768px)";
+
+        head.appendChild(link);
+        // console.log(`Dynamically preloading: ${assetUrl}`); // Uncomment for debugging
+      }
+    });
+
+    preloadedPages.add(href); // Mark this page's assets as preloaded
+  }
+}
+
+// --- Main Document Ready Listener and Service Worker Registration ---
+
+document.addEventListener("DOMContentLoaded", () => {
+  console.log("Components loaded");
+
+  // Attach mouseover listener to the "Explore Our Work" button
+  const exploreButton = document.querySelector(
+    ".clients-video-section .explore-button"
+  );
+  if (exploreButton) {
+    exploreButton.addEventListener("mouseover", handleLinkHover, {
+      once: false,
+      passive: true,
+    });
+  }
+
+  // Attach mouseover listeners to the portfolio category links on the main page (if applicable)
+  // This targets the links directly within the main portfolio section on index.html
+  const categoryGridLinks = document.querySelectorAll(".category-grid a");
+  categoryGridLinks.forEach((link) => {
+    link.addEventListener("mouseover", handleLinkHover, {
+      once: false,
+      passive: true,
+    });
+  });
+
+  // Load header and then attach listeners to its navigation links
+  loadComponent("header-container", "/components/header.html", () => {
+    initializeMobileMenu();
+    initializeSmoothScrolling();
+    initializeHeroAnimation();
+    highlightCurrentNavLink();
+
+    // Attach mouseover listener to navigation links (inside the loaded header)
+    // Adjust this selector if your header's navigation links have different classes or structure
+    const navLinks = document.querySelectorAll(".main-nav a, .nav-links a"); // Targeting common nav link structures
+    navLinks.forEach((link) => {
+      // Only attach if the link's href is a target for which we have assets to preload
+      // This prevents attaching to external links or #anchors unnecessarily
+      const href = link.getAttribute("href");
+      let absoluteHref = href;
+      if (href && !href.startsWith("/") && !href.startsWith("http")) {
+        // Handle relative paths
+        const currentPath = window.location.pathname;
+        const currentDirectory = currentPath.substring(
+          0,
+          currentPath.lastIndexOf("/") + 1
+        );
+        try {
+          absoluteHref = new URL(
+            href,
+            window.location.origin + currentDirectory
+          ).pathname;
+        } catch (e) {
+          console.error("Error resolving nav URL for preloading:", e);
+          return;
+        }
+      }
+      if (pageAssetsToPreload[absoluteHref]) {
+        link.addEventListener("mouseover", handleLinkHover, {
+          once: false,
+          passive: true,
+        });
+      }
+    });
+  });
+
+  loadComponent("footer-container", "/components/footer.html");
+});
+
+// Service Worker Registration
+// This should ideally be at the very end of your components.js or in a separate sw-register.js
+if ("serviceWorker" in navigator) {
+  window.addEventListener("load", () => {
+    navigator.serviceWorker
+      .register("/service-worker.js") // Ensure this path is correct
+      .then((registration) => {
+        console.log(
+          "ServiceWorker registration successful with scope: ",
+          registration.scope
+        );
+      })
+      .catch((err) => {
+        console.log("ServiceWorker registration failed: ", err);
+      });
   });
 }

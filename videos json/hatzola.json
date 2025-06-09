@@ -1,0 +1,26 @@
+{
+  "": {
+    "landscape": [
+      {
+        "title": "Main Video",
+        "video": "https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/client+videos/Hatzola/Main+video.mp4",
+        "thumbnail": "/images/thumbnails/Hatzola/Main video.jpg",
+        "type": "video"
+      }
+    ],
+    "portrait": [
+      {
+        "title": "Cold Start",
+        "video": "https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/client+videos/Hatzola/Cold+start.mp4",
+        "thumbnail": "/images/thumbnails/Hatzola/Cold start.jpg",
+        "type": "video"
+        },
+        {
+        "title": "A New Home",
+        "video": "https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/client+videos/Hatzola/Graphic+status.mp4",
+        "thumbnail": "/images/thumbnails/Hatzola/Graphic status.jpg",
+        "type": "video"
+      }
+    ]
+  }
+} 

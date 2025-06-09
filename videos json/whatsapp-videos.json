@@ -1,0 +1,106 @@
+{
+  "":   {
+    "portrait": [
+            {
+                "title": "Aniyei Irchu",
+                "video": "https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/wa-ads/Aniyei+Irchu+Purim+2025.mp4",
+                "thumbnail": "/images/thumbnails/WA Ads/Aniyei Irchu Purim 2025.jpg"
+            },
+            {
+                "title": "Belaaz",
+                "video": "https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/wa-ads/Belaaz+ad.mp4",
+                "thumbnail": "/images/thumbnails/WA Ads/Belaaz ad.jpg"
+            },
+            {
+                "title": "Capvise",
+                "video": "https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/wa-ads/Capvise.mp4",
+                "thumbnail": "/images/thumbnails/WA Ads/Capvise.jpg"
+            },
+            {
+                "title": "Joseph Silver",
+                "video": "https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/wa-ads/Chanukah+ad.mp4",
+                "thumbnail": "/images/thumbnails/WA Ads/Chanukah ad.jpg"
+            },
+            {
+                "title": "EJN Giveaway",
+                "video": "https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/wa-ads/Dubai+Giveaway+Final.mp4",
+                "thumbnail": "/images/thumbnails/WA Ads/Dubai Giveaway Final.jpg"
+            },
+            {
+                "title": "2 Mile EZ",
+                "video": "https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/wa-ads/Final+blue+green.mp4",
+                "thumbnail": "/images/thumbnails/WA Ads/Final blue green.jpg"
+            },
+            {
+                "title": "FrumGo",
+                "video": "https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/wa-ads/FrumGo.mp4",
+                "thumbnail": "/images/thumbnails/WA Ads/FrumGo.jpg"
+            },
+            {
+                "title": "Prime Cut",
+                "video": "https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/wa-ads/Grand+opening.mp4",
+                "thumbnail": "/images/thumbnails/WA Ads/Grand opening.jpg"
+            },
+            {
+                "title": "Halochoh Workshop",
+                "video": "https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/wa-ads/Halochoh+Workshop.mp4",
+                "thumbnail": "/images/thumbnails/WA Ads/Halochoh workshop ad FINAL.jpg"
+            },
+            {
+                "title": "Oraysa",
+                "video": "https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/wa-ads/Introduction+English+UK.mp4",
+                "thumbnail": "/images/thumbnails/WA Ads/Introduction English UK.jpg"
+            },
+            {
+                "title": "Miles for life",
+                "video": "https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/wa-ads/Miles+for+life+FINAL.mp4",
+                "thumbnail": "/images/thumbnails/WA Ads/Miles for life FINAL.jpg"
+            },
+            {
+                "title": "Kroli Kapures",
+                "video": "https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/wa-ads/Kapuros+Kroil.mp4",
+                "thumbnail": "/images/thumbnails/WA Ads/Kapuros Kroil.jpg"
+            },
+            {
+                "title": "Lechiris",
+                "video": "https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/wa-ads/Lechiris+Available.mp4",
+                "thumbnail": "/images/thumbnails/WA Ads/Lechiris Available.jpg"
+            },
+            {
+                "title": "Royal Silver",
+                "video": "https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/wa-ads/Royal+Silver+Pesach+Ad+V2.mp4",
+                "thumbnail": "/images/thumbnails/WA Ads/Royal Silver Pesach Ad V2.jpg"
+            },
+            {
+                "title": "G-Status Zmanim",
+                "video": "https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/wa-ads/Parshas+Tzaveh+2023.mp4",
+                "thumbnail": "/images/thumbnails/WA Ads/Parshas Tzaveh 2023.jpg"
+            },
+            {
+                "title": "Jewish 411",
+                "video": "https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/wa-ads/Mechitunim.mp4",
+                "thumbnail": "/images/thumbnails/WA Ads/Mechitunim.jpg"
+            },
+            {
+                "title": "Arales",
+                "video": "https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/wa-ads/Wine+Order+Ad.mp4",
+                "thumbnail": "/images/thumbnails/WA Ads/Wine order ad.jpg"
+            },
+            {
+                "title": "B&S Zmanim",
+                "video": "https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/wa-ads/Vayisgash.mp4",
+                "thumbnail": "/images/thumbnails/WA Ads/Vayisgash.jpg"
+            },
+            {
+                "title": "Shomer Shabbos",
+                "video": "https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/wa-ads/Ss+Release+Ad.mp4",
+                "thumbnail": "/images/thumbnails/WA Ads/Ss release ad.jpg"
+            },
+            {
+                "title": "Tragedy",
+                "video": "https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/wa-ads/Hocheiser+yesoimim+Final+loud+kadish.mp4",
+                "thumbnail": "/images/thumbnails/WA Ads/Hocheiser yesoimim Final loud kadish.jpg"
+            }
+        ]
+    }
+}

@@ -1,0 +1,26 @@
+{
+  "":   {
+    "portrait": [
+            {
+                "title": "Coming Soon",
+                "video": "https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/client+videos/Kol+Boniach/Coming+soon.mp4",
+                "thumbnail": "/images/thumbnails/Kol Bonaich/Coming soon.jpg"
+            },
+            {
+                "title": "25% Reached",
+                "video": "https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/client+videos/Kol+Boniach/25%25.mp4",
+                "thumbnail": "/images/thumbnails/Kol Bonaich/25%25.jpg"
+            },
+            {
+                "title": "75% Reached",
+                "video": "https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/client+videos/Kol+Boniach/75%25.mp4",
+                "thumbnail": "/images/thumbnails/Kol Bonaich/50%25.jpg"
+            },
+            {
+                "title": "Thank You",
+                "video": "https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/client+videos/Kol+Boniach/Thank+you.mp4",
+                "thumbnail": "/images/thumbnails/Kol Bonaich/Thank you.jpg"
+            }
+        ]
+    }
+}

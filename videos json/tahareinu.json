@@ -1,0 +1,50 @@
+{
+  "": {
+    "landscape": [
+      {
+        "title": "The Pain",
+        "video": "https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/client+videos/Tahareinu/Tahareinu+Main+video.mp4",
+        "thumbnail": "/images/thumbnails/Tahareinu/Tahareinu Main video.jpg",
+        "type": "video"
+      }
+    ],
+    "portrait": [
+        {
+        "title": "Kvatter",
+        "video": "https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/client+videos/Tahareinu/Tahareinu+Kvatter+USA.mp4",
+        "thumbnail": "/images/thumbnails/Tahareinu/Tahareinu Kvatter USA.jpg",
+        "type": "video"
+        },
+        {
+        "title": "Bris",
+        "video": "https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/client+videos/Tahareinu/Tahareinu+Bris+USA.mp4",
+        "thumbnail": "/images/thumbnails/Tahareinu/Tahareinu Bris USA.jpg",
+        "type": "video"
+        },
+        {
+        "title": "Tomorrow",
+        "video": "https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/client+videos/Tahareinu/Tahareinu+Tomorrow+Public+USA.mp4",
+        "thumbnail": "/images/thumbnails/Tahareinu/Tahareinu Tomorrow Public USA.jpg",
+        "type": "video"
+        },
+        {
+        "title": "25% Reached",
+        "video": "https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/client+videos/Tahareinu/Tahareinu+25%25+Reached+USA.mp4",
+        "thumbnail": "/images/thumbnails/Tahareinu/Tahareinu 25%25 Reached USA.jpg",
+        "type": "video"
+        },
+        {
+        "title": "50% Reached",
+        "video": "https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/client+videos/Tahareinu/Tahareinu+50%25+Reached+USA.mp4",
+        "thumbnail": "/images/thumbnails/Tahareinu/Tahareinu 50%25 Reached USA.jpg",
+        "type": "video"
+        },
+        {
+        "title": "75% Reached",
+        "video": "https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/client+videos/Tahareinu/Tahareinu+75%25+Reached+USA.mp4",
+        "thumbnail": "/images/thumbnails/Tahareinu/Tahareinu 75%25 Reached USA.jpg",
+        "type": "video"
+        }
+    ]
+  }
+} 

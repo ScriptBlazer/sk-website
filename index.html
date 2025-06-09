@@ -8,6 +8,10 @@
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+
+    <link rel="preload" as="video" href="https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/sk-website-page-vids/color-compressed.mp4" type="video/mp4">
+    <link rel="preload" as="video" href="https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/sk-website-page-vids/Logo+pop.mp4" type="video/mp4">
+    <link rel="preload" as="video" href="https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/sk-website-page-vids/Logo+pop+square.mp4" type="video/mp4">
 </head>
 <body>
     <main>
@@ -37,13 +41,13 @@
         <section class="clients-video-section">
             <!-- Desktop video -->
             <video autoplay loop muted playsinline class="clients-video desktop-video">
-                <source src="https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/Logo+pop.mp4" type="video/mp4">
+                <source src="https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/sk-website-page-vids/Logo+pop.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
 
             <!-- Mobile video -->
             <video autoplay loop muted playsinline class="clients-video mobile-video">
-                <source src="https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/Logo+pop+square.mp4" type="video/mp4">
+                <source src="https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/sk-website-page-vids/Logo+pop+square.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
             <div class="clients-content-overlay">
@@ -75,20 +79,20 @@
                                 <h3>10+ Years Experience</h3>
                                 <p>Benefit from a decade of expertise in delivering high-quality video production.</p>
                             </div>
-                            <!-- <div class="feature-item">
+                            <div class="feature-item">
                                 <span class="material-symbols-outlined">
                                     verified
                                     </span>
                                 <h3>High-End Quality</h3>
                                 <p>We use the latest equipment and techniques to produce stunning visual content.</p>
-                            </div> -->
-                            <!-- <div class="feature-item">
+                            </div>
+                            <div class="feature-item">
                                 <span class="material-symbols-outlined">
                                     local_shipping
                                     </span>
                                 <h3>Efficient Delivery</h3>
                                 <p>We are committed to timely project completion without compromising quality.</p>
-                            </div> -->
+                            </div>
                             <div class="feature-item">
                                 <span class="material-symbols-outlined">
                                     shoppingmode
@@ -104,7 +108,7 @@
     </main>
 
     <div id="footer-container"></div>
-    <script>
+    <!-- <script>
         if ('serviceWorker' in navigator) {
         navigator.serviceWorker.getRegistrations().then((registrations) => {
             console.log('found', registrations.length, 'registration(s)');
@@ -127,7 +131,7 @@
             });
         });
         }
-    </script>
+    </script> -->
     <script src="js/hero-animation.js" defer></script>
     <script src="js/components.js" defer></script>
 </body>

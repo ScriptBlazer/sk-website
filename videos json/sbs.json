@@ -1,0 +1,46 @@
+{
+  "": {
+    "landscape1": [
+      {
+        "title": "Main Video",
+        "video": "https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/client+videos/Side+by+Side/SBS+Main+video+2022.mp4",
+        "thumbnail": "/images/thumbnails/Side by Side/SBS Main video 2022.jpg",
+        "type": "video"
+      }
+    ],
+    "portrait": [
+      {
+        "title": "We Are Live",
+        "video": "https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/client+videos/Side+by+Side/We're+live.mp4",
+        "thumbnail": "/images/thumbnails/Side by Side/We're live.jpg",
+        "type": "video"
+      },
+      {
+        "title": "25% Reached",
+        "video": "https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/client+videos/Side+by+Side/25%25.mp4",
+        "thumbnail": "/images/thumbnails/Side by Side/25%25.jpg",
+        "type": "video"
+      },
+      {
+        "title": "50% Reached",
+        "video": "https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/client+videos/Side+by+Side/50%25.mp4",
+        "thumbnail": "/images/thumbnails/Side by Side/50%25.jpg",
+        "type": "video"
+      }
+    ],
+    "landscape2": [
+      {
+        "title": "Mr Yaakov Sorotzkin",
+        "video": "https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/client+videos/Side+by+Side/Mr+Yaakov+Sorotzkin..mp4",
+        "thumbnail": "/images/thumbnails/Side by Side/Mr Yaakov Sorotzkin..jpg",
+        "type": "video"
+      },
+      {
+        "title": "Mr Gerald Lebrett",
+        "video": "https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/client+videos/Side+by+Side/Mr+Gerald+Lebrett.mp4",
+        "thumbnail": "/images/thumbnails/Side by Side/Mr Gerald Lebrett.jpg",
+        "type": "video"
+      }
+    ]
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "":   {
+    "portrait": [
+            {
+                "title": "Metal Health",
+                "video": "https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/client+videos/Bikur+Cholim+Dsatmar/Mental+Health.mp4",
+                "thumbnail": "/images/thumbnails/Bikur Cholim Dsatmar/Mental Health.jpg"
+            },
+            {
+                "title": "Crisis Support",
+                "video": "https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/client+videos/Bikur+Cholim+Dsatmar/Crisis+Support.mp4",
+                "thumbnail": "/images/thumbnails/Bikur Cholim Dsatmar/Crisis Support.jpg"
+            },
+            {
+                "title": "Elderly Care",
+                "video": "https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/client+videos/Bikur+Cholim+Dsatmar/Elderly+Care.mp4",
+                "thumbnail": "/images/thumbnails/Bikur Cholim Dsatmar/Elderly Care.jpg"
+            },
+            {
+                "title": "We Are Live",
+                "video": "https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/client+videos/Bikur+Cholim+Dsatmar/We+are+live.mp4",
+                "thumbnail": "/images/thumbnails/Bikur Cholim Dsatmar/We are live.jpg"
+            },
+            {
+                "title": "25% Reached",
+                "video": "https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/client+videos/Bikur+Cholim+Dsatmar/25%25+Reached.mp4",
+                "thumbnail": "/images/thumbnails/Bikur Cholim Dsatmar/25%25 Reached.jpg"
+            },
+            {
+                "title": "Thank You",
+                "video": "https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/client+videos/Bikur+Cholim+Dsatmar/Thank+you.mp4",
+                "thumbnail": "/images/thumbnails/Bikur Cholim Dsatmar/Thank you.jpg"
+            }
+        ]
+    }
+}

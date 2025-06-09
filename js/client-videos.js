@@ -169,6 +169,60 @@ document.addEventListener("DOMContentLoaded", () => {
                 timeline.value = 0;
                 timeline.step = 0.01;
 
+                let fullscreenButton = null; // Declare it outside the if to be accessible later
+
+                // Only create the fullscreen button for landscape videos
+                // Check if it's a landscape layout in a nested structure OR
+                // if it's a flat structure AND the current layout being processed is 'landscape'
+                if (
+                  baseLayout === "landscape" ||
+                  (isFlatStructure && layout === "landscape")
+                ) {
+                  fullscreenButton = document.createElement("span");
+                  fullscreenButton.className =
+                    "material-symbols-outlined fullscreen-toggle";
+                  fullscreenButton.textContent = "fullscreen";
+                  fullscreenButton.alt = "Toggle Fullscreen";
+
+                  // Fullscreen functionality (attached only if button is created)
+                  fullscreenButton.addEventListener("click", (e) => {
+                    e.stopPropagation();
+                    if (
+                      document.fullscreenElement ||
+                      document.webkitFullscreenElement ||
+                      document.mozFullScreenElement ||
+                      document.msFullscreenElement
+                    ) {
+                      if (document.exitFullscreen) {
+                        document.exitFullscreen();
+                      } else if (document.mozCancelFullScreen) {
+                        /* Firefox */
+                        document.mozCancelFullScreen();
+                      } else if (document.webkitExitFullscreen) {
+                        /* Chrome, Safari and Opera */
+                        document.webkitExitFullscreen();
+                      } else if (document.msExitFullscreen) {
+                        /* IE/Edge */
+                        document.msExitFullscreen();
+                      }
+                    } else {
+                      if (videoWrapper.requestFullscreen) {
+                        videoWrapper.requestFullscreen();
+                      } else if (videoWrapper.mozRequestFullScreen) {
+                        /* Firefox */
+                        videoWrapper.mozRequestFullScreen();
+                      } else if (videoWrapper.webkitRequestFullscreen) {
+                        /* Chrome, Safari and Opera */
+                        videoWrapper.webkitRequestFullscreen();
+                      } else if (videoWrapper.msRequestFullscreen) {
+                        /* IE/Edge */
+                        videoWrapper.msRequestFullscreen();
+                      }
+                    }
+                  });
+                }
+                // --- END: MODIFIED SECTION FOR FULLSCREEN TOGGLE ---
+
                 video.addEventListener("timeupdate", () => {
                   timeline.max = video.duration || 1;
                   timeline.value = video.currentTime;
@@ -187,6 +241,13 @@ document.addEventListener("DOMContentLoaded", () => {
                 videoWrapper.appendChild(video);
                 videoWrapper.appendChild(timeline);
                 videoWrapper.appendChild(muteIcon);
+
+                // --- START: MODIFIED APPENDING OF FULLSCREEN BUTTON ---
+                if (fullscreenButton) {
+                  // Only append if the button was created
+                  videoWrapper.appendChild(fullscreenButton);
+                }
+                // --- END: MODIFIED APPENDING OF FULLSCREEN BUTTON ---
 
                 if (caption) wrapper.appendChild(caption);
                 wrapper.appendChild(videoWrapper);
