@@ -1,0 +1,53 @@
+{
+  "": {
+    "landscape": [
+      {
+        "title": "PiR Global Trips",
+        "video": "https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/client+videos/Plan+it+Rite/PIR+Global+trips+Final.mp4",
+        "thumbnail": "/images/thumbnails/Plan it Rite/PIR Global trips Final.jpg",
+        "type": "video"
+      },
+      {
+        "title": "Carpet City Showroom Display",
+        "video": "https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/client+videos/carpet+city/Showroom+display+vid.mp4",
+        "thumbnail": "/images/thumbnails/Carpet City/Showroom display vid Jtrade.jpg",
+        "type": "video"
+      },
+      {
+        "title": "Rosh Hashana",
+        "video": "https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/client+videos/Meilech+Halpern/Meilech+Rosh+ad.mp4",
+        "thumbnail": "/images/thumbnails/Meilech Halpern/Meilech Rosh ad.jpg",
+        "type": "video"
+      }
+    ],
+    "portrait": [
+      {
+        "title": "PiR Global Trips",
+        "video": "https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/client+videos/Plan+it+Rite/PiR+Peru.mp4",
+        "thumbnail": "/images/thumbnails/Plan it Rite/PiR Peru.jpg",
+        "type": "video"
+        },
+        {
+        "title": "Sukkot Whisky Ad",
+        "video": "https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/client+videos/grapevine/Grapevine+Sukkot+2024.mp4",
+        "thumbnail": "/images/thumbnails/Grapevine/Grapevine Sukkot 2024.jpg"
+        },
+        {
+        "title": "Few Days Left",
+        "video": "https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/client+videos/carpet+city/Few+days+left!.mp4",
+        "thumbnail": "/images/thumbnails/Carpet City/Few days left!.jpg",
+        "type": "video"
+        },
+        {
+        "title": "Sign up",
+        "video": "https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/client+videos/Jtrade/Sign+up+1080.mp4",
+        "thumbnail": "/images/thumbnails/Jtrade/Sign up 1080.jpg"
+      },
+      {
+        "title": "Spirit of Sale",
+        "video": "https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/client+videos/grapevine/Spirit+of+Sale.mp4",
+        "thumbnail": "/images/thumbnails/Grapevine/Spirit of Sale.jpg"
+      }
+    ]
+  }
+} 

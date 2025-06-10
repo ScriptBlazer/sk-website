@@ -1,46 +1,43 @@
-// Email validation helper function
-function isValidEmail(email) {
-  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  return emailRegex.test(email);
-}
+const sendButton = document.getElementById("send-button");
 
-// Form validation for contact form
-const contactForm = document.querySelector("#contact-form");
-if (contactForm) {
-  contactForm.addEventListener("submit", (e) => {
-    e.preventDefault();
-
+if (sendButton) {
+  sendButton.addEventListener("click", () => {
+    // Get input values
     const name = document.querySelector("#name").value.trim();
-    const email = document.querySelector("#email").value.trim();
+    const subject = document.querySelector("#subject").value.trim();
     const message = document.querySelector("#message").value.trim();
 
-    let isValid = true;
-    let errorMessage = "";
+    // Clear previous error messages
+    document
+      .querySelectorAll(".form-error")
+      .forEach((el) => (el.textContent = ""));
+
+    let hasError = false;
 
     if (!name) {
-      isValid = false;
-      errorMessage += "Please enter your name.\n";
+      document.querySelector("#name-error").textContent =
+        "Please enter your name.";
+      hasError = true;
     }
 
-    if (!email) {
-      isValid = false;
-      errorMessage += "Please enter your email.\n";
-    } else if (!isValidEmail(email)) {
-      isValid = false;
-      errorMessage += "Please enter a valid email address.\n";
+    if (!subject) {
+      document.querySelector("#subject-error").textContent =
+        "Please enter a subject.";
+      hasError = true;
     }
 
     if (!message) {
-      isValid = false;
-      errorMessage += "Please enter your message.\n";
+      document.querySelector("#message-error").textContent =
+        "Please enter a message.";
+      hasError = true;
     }
 
-    if (isValid) {
-      // Here you would typically send the form data to your server
-      alert("Thank you for your message! We will get back to you soon.");
-      contactForm.reset();
-    } else {
-      alert(errorMessage);
-    }
+    if (hasError) return;
+
+    // Construct mailto link
+    const mailtoLink = `mailto:info@socialklick.com?subject=${encodeURIComponent(
+      subject
+    )}&body=${encodeURIComponent(message + "\n\n— " + name)}`;
+    window.location.href = mailtoLink;
   });
 }

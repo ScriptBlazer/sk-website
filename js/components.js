@@ -304,19 +304,13 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 // Service Worker Registration
-// This should ideally be at the very end of your components.js or in a separate sw-register.js
 if ("serviceWorker" in navigator) {
-  window.addEventListener("load", () => {
-    navigator.serviceWorker
-      .register("/service-worker.js") // Ensure this path is correct
-      .then((registration) => {
-        console.log(
-          "ServiceWorker registration successful with scope: ",
-          registration.scope
-        );
-      })
-      .catch((err) => {
-        console.log("ServiceWorker registration failed: ", err);
-      });
-  });
+  navigator.serviceWorker
+    .register("/js/service-worker.js")
+    .then((reg) => {
+      console.log("Service Worker registered:", reg);
+    })
+    .catch((err) => {
+      console.error("Service Worker registration failed:", err);
+    });
 }

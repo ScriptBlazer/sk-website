@@ -557,7 +557,7 @@ footer {
 /* Music note icon in corner */
 .mute-toggle {
   position: absolute;
-  bottom: 10px;
+  bottom: 15px;
   right: 10px;
   width: 35px;
   height: 35px;
@@ -575,7 +575,7 @@ footer {
     font-size: 2.3rem !important;
     position: absolute;
     cursor: pointer;
-    bottom: 1px;
+    bottom: 9px;
     left: 1px;
     padding: 5px;
     border-radius: 5px;
@@ -597,7 +597,7 @@ footer {
 /* Position slider OVER the bottom of the video */
 .video-timeline {
   position: absolute;
-  bottom: 0;
+  bottom: 6px;
   left: 0;
   right: 0;
   height: 4px;
@@ -789,6 +789,12 @@ in a grid use the two below */
 
 .submit-btn:hover {
     background-color: var(--accent-color);
+}
+
+.form-error {
+    color: red;
+    font-size: 0.9em;
+    margin-top: 4px;
 }
 
 

@@ -54,24 +54,23 @@
                     </div>
                     <div class="contact-form">
                         <h2>Send us a Message</h2>
-                        <form id="contact-form">
+                        <form id="contact-form" novalidate>
                             <div class="form-group">
                                 <label for="name">Name</label>
                                 <input type="text" id="name" name="name" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="email">Email</label>
-                                <input type="email" id="email" name="email" required>
+                                <div class="form-error" id="name-error"></div>
                             </div>
                             <div class="form-group">
                                 <label for="subject">Subject</label>
                                 <input type="text" id="subject" name="subject" required>
+                                <div class="form-error" id="subject-error"></div>
                             </div>
                             <div class="form-group">
                                 <label for="message">Message</label>
                                 <textarea id="message" name="message" rows="5" required></textarea>
+                                <div class="form-error" id="message-error"></div>
                             </div>
-                            <button type="submit" class="submit-btn">Send Message</button>
+                            <button type="button" class="submit-btn" id="send-button">Send Message</button>
                         </form>
                     </div>
                 </div>
@@ -80,30 +79,6 @@
     </main>
 
     <div id="footer-container"></div>
-    <!-- <script>
-        if ('serviceWorker' in navigator) {
-        navigator.serviceWorker.getRegistrations().then((registrations) => {
-            console.log('found', registrations.length, 'registration(s)');
-            if (registrations.length === 0) {
-            console.log('No service workers registered.');
-            }
-            registrations.forEach((registration, i) => {
-            registration.unregister().then((success) => {
-                console.log(`[${i}] Service Worker unregistered:`, success);
-                caches.keys().then((cacheNames) => {
-                cacheNames.forEach((cacheName) => {
-                    caches.delete(cacheName).then((deleted) => {
-                    console.log(`Cache '${cacheName}' deleted:`, deleted);
-                    });
-                });
-                });
-            }).catch((err) => {
-                console.error(`❌ Failed to unregister [${i}]`, err);
-            });
-            });
-        });
-        }
-    </script> -->
     <script src="js/components.js" defer></script>
     <script src="js/contact.js" defer></script>
 
