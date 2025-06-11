@@ -37,6 +37,16 @@
     ],
     "cleanUrls": true,
     "trailingSlash": false,
-    "error": "/404.html"
+    "error": "/404.html",
+    "rewrites": [
+      {
+        "source": "/contact-us",
+        "destination": "/contact.html"
+      },
+      {
+        "source": "/portfolio",
+        "destination": "/portfolio.html"
+      }
+    ]
   }
 }
