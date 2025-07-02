@@ -2,6 +2,46 @@
   "":   {
     "portrait": [
             {
+                "title": "Areivim Awareness",
+                "video": "https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/wa-ads/Areivim+Awareness+Video.mp4",
+                "thumbnail": "/images/thumbnails/WA Ads/Areivim Awareness Video.jpg"
+            },
+            {
+                "title": "Rav Tov Lotto",
+                "video": "https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/wa-ads/Rav+Tov+Lotto+Sign+up+USA.mp4",
+                "thumbnail": "/images/thumbnails/WA Ads/Rav Tov Lotto Sign up USA.jpg"
+            },
+            {
+                "title": "Revive",
+                "video": "hhttps://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/wa-ads/What+is+Revive.mp4",
+                "thumbnail": "/images/thumbnails/WA Ads/What is Revive.jpg"
+            },
+            {
+                "title": "Sentry",
+                "video": "https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/wa-ads/Sentry+Jtrade+2025.mp4",
+                "thumbnail": "/images/thumbnails/WA Ads/Sentry Jtrade 2025.jpg"
+            },
+            {
+                "title": "Architecture course",
+                "video": "https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/wa-ads/VA+Architecture+course.mp4",
+                "thumbnail": "/images/thumbnails/WA Ads/VA Architecture course.jpg"
+            },
+            {
+                "title": "Giveaway",
+                "video": "https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/wa-ads/Ari+Feferkorn+Status+Giveaway+2025.mp4",
+                "thumbnail": "/images/thumbnails/WA Ads/Ari Feferkorn Status Giveaway 2025.jpg"
+            },
+            {
+                "title": "Breslov App",
+                "video": "https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/wa-ads/Breslov+Center+App+promo.mp4",
+                "thumbnail": "/images/thumbnails/WA Ads/Breslov Center App promo.jpg"
+            },
+            {
+                "title": "Trvl Launch",
+                "video": "https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/wa-ads/Trvl+Launch.mp4",
+                "thumbnail": "/images/thumbnails/WA Ads/Trvl Launch.jpg"
+            },
+            {
                 "title": "Aniyei Irchu",
                 "video": "https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/wa-ads/Aniyei+Irchu+Purim+2025.mp4",
                 "thumbnail": "/images/thumbnails/WA Ads/Aniyei Irchu Purim 2025.jpg"
@@ -48,8 +88,8 @@
             },
             {
                 "title": "Oraysa",
-                "video": "https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/wa-ads/Introduction+English+UK.mp4",
-                "thumbnail": "/images/thumbnails/WA Ads/Introduction English UK.jpg"
+                "video": "https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/wa-ads/Introduction+English+USA+(Moed+Kuten).mp4",
+                "thumbnail": "/images/thumbnails/WA Ads/Introduction English USA (Moed Kuten).jpg"
             },
             {
                 "title": "Miles for life",
@@ -94,7 +134,7 @@
             {
                 "title": "Shomer Shabbos",
                 "video": "https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/wa-ads/Ss+Release+Ad.mp4",
-                "thumbnail": "/images/thumbnails/WA Ads/Ss release ad.jpg"
+                "thumbnail": "/images/thumbnails/WA Ads/SS release ad.jpg"
             },
             {
                 "title": "Tragedy",
