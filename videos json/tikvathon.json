@@ -1,0 +1,36 @@
+{
+  "":   {
+    "portrait": [
+            {
+                "title": "Tikathon is live",
+                "video": "https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/client+videos/Tikvathon/Tikathon+is+live.mp4",
+                "thumbnail": "/images/thumbnails/Tikvathon/Tikathon is live.jpg"
+            },
+            {
+                "title": "25% Reached",
+                "video": "https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/client+videos/Tikvathon/25%25+Reached.mp4",
+                "thumbnail": "/images/thumbnails/Tikvathon/25%25 Reached.jpg"
+            },
+            {
+                "title": "75% Reached",
+                "video": "https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/client+videos/Tikvathon/75%25+Reached.mp4",
+                "thumbnail": "/images/thumbnails/Tikvathon/75%25 Reached.jpg"
+            },
+            {
+                "title": "Sign-up Invitation",
+                "video": "https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/client+videos/Tikvathon/Sign+up+Kids+invitation+Tikvathon+2024.mp4",
+                "thumbnail": "/images/thumbnails/Tikvathon/Sign up Kids invitation Tikvathon 2024.jpg"
+            },
+            {
+                "title": "Their Smile",
+                "video": "https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/client+videos/Tikvathon/Their+Smile.mp4",
+                "thumbnail": "/images/thumbnails/Tikvathon/Their Smile.jpg"
+            },
+            {
+                "title": "Shabbos Zmanim",
+                "video": "https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/client+videos/Tikvathon/Shabbos+zmanim.mp4",
+                "thumbnail": "/images/thumbnails/Tikvathon/Shabbos zmanim.jpg"
+            }
+        ]
+    }
+}
