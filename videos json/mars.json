@@ -10,22 +10,40 @@
     ],
     "portrait": [
       {
-        "title": "Behing the Call",
-        "video": "https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/client+videos/MARS/Behind+the+phone+call+English.mp4",
-        "thumbnail": "/images/thumbnails/MARS/Behind the phone call English.jpg",
-        "type": "video"
-        },
-        {
-        "title": "Bring Them Home",
-        "video": "https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/client+videos/MARS/Bring+them+home.mp4",
-        "thumbnail": "/images/thumbnails/MARS/Bring them home.jpg",
-        "type": "video"
-        },
-        {
-        "title": "Cant do this on my own",
-        "video": "https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/client+videos/MARS/Cant+do+this+on+my+own.mp4",
-        "thumbnail": "/images/thumbnails/MARS/Cant do this on my own.jpg",
-        "type": "video"
+      "title": "Never Give UP",
+      "video": "https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/client+videos/MARS/We+never+give+up.mp4",
+      "thumbnail": "/images/thumbnails/MARS/We never give up.jpg",
+      "type": "video"
+      },
+      {
+      "title": "Behing the Call",
+      "video": "https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/client+videos/MARS/Behind+the+phone+call+English.mp4",
+      "thumbnail": "/images/thumbnails/MARS/Behind the phone call English.jpg",
+      "type": "video"
+      },
+      {
+      "title": "Bring Them Home",
+      "video": "https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/client+videos/MARS/Bring+them+home.mp4",
+      "thumbnail": "/images/thumbnails/MARS/Bring them home.jpg",
+      "type": "video"
+      },
+      {
+      "title": "Were Live",
+      "video": "https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/client+videos/MARS/Mars+Numbers+(Were+live).mp4",
+      "thumbnail": "/images/thumbnails/MARS/Mars Numbers (Were live).jpg",
+      "type": "video"
+      },
+      {
+      "title": "25% Reached",
+      "video": "https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/client+videos/MARS/25%25+Reached+2024.mp4",
+      "thumbnail": "/images/thumbnails/MARS/25%25 Reached 2024.jpg",
+      "type": "video"
+      },
+      {
+      "title": "75% Reached",
+      "video": "https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/client+videos/MARS/75%25+Reached+2024.mp4",
+      "thumbnail": "/images/thumbnails/MARS/75%25 Reached 2024.jpg",
+      "type": "video"
       }
     ]
   },
@@ -33,58 +51,28 @@
     "landscape": [
       {
         "title": "Main Video",
-        "video": "https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/client+videos/MARS/Mars+campaign+2024+Main+vid.mp4",
-        "thumbnail": "/images/thumbnails/MARS/Mars campaign 2024 Main vid.jpg",
+        "video": "https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/client+videos/MARS/Mars+2022+campaign+Main+vid.mp4",
+        "thumbnail": "/images/thumbnails/MARS/Mars 2022 campaign Main vid.jpg",
         "type": "video"
       }
     ],
     "portrait": [
       {
-        "title": "Behing the Call",
-        "video": "https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/client+videos/MARS/Behind+the+phone+call+English.mp4",
-        "thumbnail": "/images/thumbnails/MARS/Behind the phone call English.jpg",
+        "title": "Story in Numbers",
+        "video": "https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/client+videos/MARS/First+WA+ad.mp4",
+        "thumbnail": "/images/thumbnails/MARS/First WA ad.jpg",
         "type": "video"
         },
         {
-        "title": "Bring Them Home",
-        "video": "https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/client+videos/MARS/Bring+them+home.mp4",
-        "thumbnail": "/images/thumbnails/MARS/Bring them home.jpg",
+        "title": "Story in Numbers 2",
+        "video": "https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/client+videos/MARS/Second+WA+ad.mp4",
+        "thumbnail": "/images/thumbnails/MARS/Second WA ad.jpg",
         "type": "video"
         },
         {
-        "title": "Cant do this on my own",
-        "video": "https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/client+videos/MARS/Cant+do+this+on+my+own.mp4",
-        "thumbnail": "/images/thumbnails/MARS/Cant do this on my own.jpg",
-        "type": "video"
-      }
-    ]
-  },
-    "Campaign 2021": {
-    "landscape": [
-      {
-        "title": "Main Video",
-        "video": "https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/client+videos/MARS/Mars+campaign+2024+Main+vid.mp4",
-        "thumbnail": "/images/thumbnails/MARS/Mars campaign 2024 Main vid.jpg",
-        "type": "video"
-      }
-    ],
-    "portrait": [
-      {
-        "title": "Behing the Call",
-        "video": "https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/client+videos/MARS/Behind+the+phone+call+English.mp4",
-        "thumbnail": "/images/thumbnails/MARS/Behind the phone call English.jpg",
-        "type": "video"
-        },
-        {
-        "title": "Bring Them Home",
-        "video": "https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/client+videos/MARS/Bring+them+home.mp4",
-        "thumbnail": "/images/thumbnails/MARS/Bring them home.jpg",
-        "type": "video"
-        },
-        {
-        "title": "Cant do this on my own",
-        "video": "https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/client+videos/MARS/Cant+do+this+on+my+own.mp4",
-        "thumbnail": "/images/thumbnails/MARS/Cant do this on my own.jpg",
+        "title": "50% Reached",
+        "video": "https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/client+videos/MARS/50%25.mp4",
+        "thumbnail": "/images/thumbnails/MARS/50%25.jpg",
         "type": "video"
       }
     ]
