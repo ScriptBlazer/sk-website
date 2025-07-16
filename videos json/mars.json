@@ -40,6 +40,12 @@
       "type": "video"
       },
       {
+      "title": "Hayoim",
+      "video": "https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/client+videos/MARS/2025/Hayoim.mp4",
+      "thumbnail": "/images/thumbnails/MARS/2025/Hayoim.jpg",
+      "type": "video"
+      },
+      {
       "title": "50% Reached",
       "video": "https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/client+videos/MARS/2025/50%25+Reached.mp4",
       "thumbnail": "/images/thumbnails/MARS/2025/50%25 Reached.jpg",
