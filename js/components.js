@@ -1,3 +1,13 @@
+// Universal loader hide logic: hide loader on DOMContentLoaded unless a page takes over
+// This must be at the very top of the file
+
+document.addEventListener("DOMContentLoaded", function() {
+  var loader = document.getElementById('page-loader-overlay');
+  if (loader && !window._pageLoaderHandled) {
+    loader.classList.add('hide');
+  }
+});
+
 // Function to load HTML components and run an optional callback
 async function loadComponent(elementId, path, callback) {
   try {
@@ -314,3 +324,24 @@ if ("serviceWorker" in navigator) {
       console.error("Service Worker registration failed:", err);
     });
 }
+
+// Global navigation loader: show loader on internal link click
+(function() {
+  document.addEventListener('click', function(e) {
+    const link = e.target.closest('a');
+    if (!link) return;
+    // Only handle internal links (not external, not target _blank, not mailto/tel)
+    const href = link.getAttribute('href');
+    if (
+      !href ||
+      href.startsWith('http') ||
+      href.startsWith('mailto:') ||
+      href.startsWith('tel:') ||
+      link.target === '_blank' ||
+      link.hasAttribute('download')
+    ) return;
+    // Show loader
+    const loader = document.getElementById('page-loader-overlay');
+    if (loader) loader.classList.remove('hide');
+  }, true); // Use capture to catch early
+})();

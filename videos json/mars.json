@@ -1,4 +1,70 @@
 {
+  "Campaign 2025": {
+    "landscape": [
+      {
+        "title": "Main Video",
+        "video": "https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/client+videos/MARS/2025/MARS+Campaign+2025+Main+video.mp4",
+        "thumbnail": "/images/thumbnails/MARS/2025/MARS Campaign 2025 Main video.jpg",
+        "type": "video"
+      }
+    ],
+    "portrait": [
+      {
+      "title": "Shocked",
+      "video": "https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/client+videos/MARS/2025/Teaser.mp4",
+      "thumbnail": "/images/thumbnails/MARS/2025/Teaser.jpg",
+      "type": "video"
+      },
+      {
+      "title": "Silent",
+      "video": "https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/client+videos/MARS/2025/Silent.mp4",
+      "thumbnail": "/images/thumbnails/MARS/2025/Silent.jpg",
+      "type": "video"
+      },
+      {
+      "title": "You Weren't There",
+      "video": "https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/client+videos/MARS/2025/You+weren't+there.mp4",
+      "thumbnail": "/images/thumbnails/MARS/2025/You weren't there.jpg",
+      "type": "video"
+      },
+      {
+      "title": "Statistics",
+      "video": "https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/client+videos/MARS/2025/Statistics.mp4",
+      "thumbnail": "/images/thumbnails/MARS/2025/Statistics.jpg",
+      "type": "video"
+      },
+      {
+      "title": "We're Live",
+      "video": "https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/client+videos/MARS/2025/We+Are+Live.mp4",
+      "thumbnail": "/images/thumbnails/MARS/2025/We Are Live.jpg",
+      "type": "video"
+      },
+      {
+      "title": "50% Reached",
+      "video": "https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/client+videos/MARS/2025/50%25+Reached.mp4",
+      "thumbnail": "/images/thumbnails/MARS/2025/50%25 Reached.jpg",
+      "type": "video"
+      },
+      {
+      "title": "1.3M Reached",
+      "video": "https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/client+videos/MARS/2025/1.3M.mp4",
+      "thumbnail": "/images/thumbnails/MARS/2025/1.3M.jpg",
+      "type": "video"
+      },
+      {
+      "title": "75% Reached",
+      "video": "https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/client+videos/MARS/2025/75%25+Reached.mp4",
+      "thumbnail": "/images/thumbnails/MARS/2025/75%25 Reached.jpg",
+      "type": "video"
+      },
+      {
+      "title": "Goal Reached",
+      "video": "https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/client+videos/MARS/2025/Goal+Reached+-+Bonus+goal.mp4",
+      "thumbnail": "/images/thumbnails/MARS/2025/Goal Reached - Bonus goal.jpg",
+      "type": "video"
+      }
+    ]
+  },
   "Campaign 2024": {
     "landscape": [
       {
@@ -28,7 +94,7 @@
       "type": "video"
       },
       {
-      "title": "Were Live",
+      "title": "We're Live",
       "video": "https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/client+videos/MARS/Mars+Numbers+(Were+live).mp4",
       "thumbnail": "/images/thumbnails/MARS/Mars Numbers (Were live).jpg",
       "type": "video"
