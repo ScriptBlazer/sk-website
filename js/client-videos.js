@@ -235,7 +235,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 muteIcon.addEventListener("click", (e) => {
                   e.stopPropagation();
                   video.muted = !video.muted;
-                  muteIcon.style.opacity = video.muted ? "0.7" : "1";
+                  muteIcon.src = video.muted ? "/images/misc/music_note_icon_mute.png" : "/images/misc/music_note_icon.png";
                 });
 
                 videoWrapper.appendChild(video);
@@ -261,7 +261,9 @@ document.addEventListener("DOMContentLoaded", () => {
           }
         });
 
-        container.appendChild(yearSection);
+        if (container) {
+          container.appendChild(yearSection);
+        }
       });
 
       initializeLazyVideos();

@@ -3,9 +3,13 @@
 
 document.addEventListener("DOMContentLoaded", function() {
   var loader = document.getElementById('page-loader-overlay');
-  if (loader && !window._pageLoaderHandled) {
-    loader.classList.add('hide');
-  }
+  if (loader) loader.classList.add('hide');
+});
+
+// Hide loader on bfcache restore (back/forward navigation)
+window.addEventListener('pageshow', function(event) {
+  var loader = document.getElementById('page-loader-overlay');
+  if (loader) loader.classList.add('hide');
 });
 
 // Function to load HTML components and run an optional callback
@@ -16,7 +20,9 @@ async function loadComponent(elementId, path, callback) {
     const container = document.getElementById(elementId);
     if (container) {
       container.innerHTML = html;
-
+      // Hide loader after component loads
+      var loader = document.getElementById('page-loader-overlay');
+      if (loader) loader.classList.add('hide');
       // Execute callback if provided
       if (callback && typeof callback === "function") {
         callback();
@@ -24,8 +30,17 @@ async function loadComponent(elementId, path, callback) {
     }
   } catch (error) {
     console.error(`Error loading component for ${elementId}:`, error);
+    // Hide loader even if fetch fails
+    var loader = document.getElementById('page-loader-overlay');
+    if (loader) loader.classList.add('hide');
   }
 }
+
+// Fallback: hide loader after 5 seconds no matter what
+setTimeout(function() {
+  var loader = document.getElementById('page-loader-overlay');
+  if (loader) loader.classList.add('hide');
+}, 5000);
 
 // Function to initialize mobile menu functionality
 function initializeMobileMenu() {
@@ -243,7 +258,7 @@ function handleLinkHover(event) {
   }
 }
 
-// --- Main Document Ready Listener and Service Worker Registration ---
+// --- Main Document Ready Listener  ---
 
 document.addEventListener("DOMContentLoaded", () => {
   console.log("Components loaded");
@@ -312,18 +327,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   loadComponent("footer-container", "/components/footer.html");
 });
-
-// Service Worker Registration
-if ("serviceWorker" in navigator) {
-  navigator.serviceWorker
-    .register("/js/service-worker.js")
-    .then((reg) => {
-      console.log("Service Worker registered:", reg);
-    })
-    .catch((err) => {
-      console.error("Service Worker registration failed:", err);
-    });
-}
 
 // Global navigation loader: show loader on internal link click
 (function() {
