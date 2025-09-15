@@ -5,82 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Portfolio - Social Klick</title>
 
-  <!-- <script>
-    // THIS SCRIPT IS DESIGNED FOR AGGRESSIVE CACHE CLEARING.
-    // USE WITH CAUTION AND REMOVE AFTER DEPLOYMENT IF NOT INTENDED FOR PERMANENT USE.
-
-    async function demolishCache() {
-      console.log('Initiating aggressive cache demolition...');
-
-      // 1. Unregister all Service Workers
-      if ('serviceWorker' in navigator) {
-          try {
-              const registrations = await navigator.serviceWorker.getRegistrations();
-              console.log(`Found ${registrations.length} service worker registration(s).`);
-
-              if (registrations.length === 0) {
-                  console.log('No service workers registered to unregister.');
-              }
-
-              for (const [i, registration] of registrations.entries()) {
-                  const success = await registration.unregister();
-                  if (success) {
-                      console.log(`[${i}] Service Worker unregistered successfully:`, registration.scope);
-                  } else {
-                      console.warn(`[${i}] Failed to unregister service worker:`, registration.scope);
-                  }
-              }
-          } catch (err) {
-              console.error('Error during service worker unregistration:', err);
-          }
-      } else {
-          console.log('Service workers not supported in this browser.');
-      }
-
-      // 2. Delete all caches from the Cache API
-      if ('caches' in window) {
-          try {
-              const cacheNames = await caches.keys();
-              console.log(`Found ${cacheNames.length} cache(s) to delete.`);
-
-              if (cacheNames.length === 0) {
-                  console.log('No caches found to delete.');
-              }
-
-              for (const [i, cacheName] of cacheNames.entries()) {
-                  const deleted = await caches.delete(cacheName);
-                  if (deleted) {
-                      console.log(`[${i}] Cache '${cacheName}' deleted successfully.`);
-                  } else {
-                      console.warn(`[${i}] Failed to delete cache '${cacheName}'.`);
-                  }
-              }
-          } catch (err) {
-              console.error('Error during cache deletion:', err);
-          }
-      } else {
-          console.log('Cache API not supported in this browser.');
-      }
-
-      console.log('Cache demolition complete. Attempting full page reload...');
-      // 3. Force a full page reload from the server, bypassing browser cache for the main document
-      // This is crucial as the above steps clear caches for *subsequent* requests,
-      // but the current page might still be from cache.
-      window.location.reload(true); // `true` forces a reload from the server, not cache
-  }
-
-  // Run the demolition function immediately when the script is parsed
-  demolishCache();
-
-  // Optional: If you want to ensure the page doesn't load until the cache is clear,
-  // you could add a small delay and then reload, but this might introduce a flicker.
-  // For truly critical updates, the immediate reload(true) after clearing is best.
-  // You might consider a short delay *before* initial content rendering if you have heavy JS.
-  // document.addEventListener('DOMContentLoaded', () => {
-  //     // Your main app initialization might go here, *after* the demolition script runs
-  // });
-</script> -->
-
   <meta name="description" content="Browse the Social Klick portfolio – top-tier video productions for corporate clients, charity campaigns, WhatsApp ads, and more.">
   <meta name="keywords" content="video portfolio, video production showcase, corporate videos, charity videos, whatsapp ads, social klick work">
   <meta name="author" content="Social Klick">
@@ -102,13 +26,7 @@
   <link rel="preload" as="image" href="/images/misc/sk-favicon.png">
   <link rel="stylesheet" href="css/styles.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
-
-  <link rel="preload" as="video" href="https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/sk-website-page-vids/Corporate+reel.mp4" type="video/mp4">
-  <link rel="preload" as="video" href="https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/sk-website-page-vids/Charity+reel.mp4" type="video/mp4">
-  <link rel="preload" as="video" href="https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/sk-website-page-vids/Whatsapp+reel.mp4" type="video/mp4">
-  <link rel="preload" as="video" href="https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/sk-website-page-vids/Corporate+reel+landscape.mp4" type="video/mp4">
-  <link rel="preload" as="video" href="https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/sk-website-page-vids/Charity+reel+landscape.mp4" type="video/mp4">
-  <link rel="preload" as="video" href="https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/sk-website-page-vids/Whatsapp+reel+landscape.mp4" type="video/mp4">
+  
 </head>
 <body>
   <div id="header-container"></div>
@@ -117,86 +35,70 @@
     <section class="portfolio-categories">
       <div class="container">
         <div class="category-grid">
-
-
+    
           <!-- Corporate -->
           <a href="portfolio/corporate.html">
             <div class="category-image">
-              <video class="desktop-video" autoplay loop muted playsinline>
-                <source src="https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/sk-website-page-vids/Corporate+reel.mp4" type="video/mp4">
-              </video>
-              <video class="mobile-video" autoplay loop muted playsinline>
-                <source src="https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/sk-website-page-vids/Corporate+reel+landscape.mp4" type="video/mp4">
+              <video autoplay loop playsinline>
+                <source 
+                  src="/videos/Corporate reel.mp4"
+                  type="video/mp4" 
+                  media="(min-width: 768px)">
+                <source 
+                src="/videos/Corporate reel landscape.mp4" 
+                  type="video/mp4" 
+                  media="(max-width: 767px)">
               </video>
             </div>
             <div class="category-content">
               <h1>Corporate Videos</h1>
             </div>
           </a>
-
+    
           <!-- Charity -->
           <a href="portfolio/charity.html">
             <div class="category-image">
-              <video class="desktop-video" autoplay loop muted playsinline>
-                <source src="https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/sk-website-page-vids/Charity+reel.mp4" type="video/mp4">
-              </video>
-              <video class="mobile-video" autoplay loop muted playsinline>
-                <source src="https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/sk-website-page-vids/Charity+reel+landscape.mp4" type="video/mp4">
+              <video autoplay loop playsinline>
+                <source 
+                  src="/videos/Charity reel.mp4" 
+                  type="video/mp4" 
+                  media="(min-width: 768px)">
+                <source 
+                src="/videos/Charity reel landscape.mp4" 
+                  type="video/mp4" 
+                  media="(max-width: 767px)">
               </video>
             </div>
             <div class="category-content">
               <h1>Charity Campaigns</h1>
             </div>
           </a>
-
+    
           <!-- WhatsApp -->
           <a href="portfolio/whatsapp-videos.html">
             <div class="category-image">
-              <video class="desktop-video" autoplay loop muted playsinline>
-                <source src="https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/sk-website-page-vids/Whatsapp+reel.mp4" type="video/mp4">
-              </video>
-              <video class="mobile-video" autoplay loop muted playsinline>
-                <source src="https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/sk-website-page-vids/Whatsapp+reel+landscape.mp4" type="video/mp4">
+              <video autoplay loop playsinline>
+                <source 
+                  src="/videos/Whatsapp reel.mp4" 
+                  type="video/mp4" 
+                  media="(min-width: 768px)">
+                <source 
+                src="/videos/Whatsapp reel landscape.mp4"  
+                  type="video/mp4" 
+                  media="(max-width: 767px)">
               </video>
             </div>
             <div class="category-content">
               <h1>WhatsApp Status Ads</h1>
             </div>
           </a>
-
-          
-
-
+    
         </div>
       </div>
     </section>
   </main>
 
   <div id="footer-container"></div>
-    <!-- <script>
-        if ('serviceWorker' in navigator) {
-        navigator.serviceWorker.getRegistrations().then((registrations) => {
-            console.log('found', registrations.length, 'registration(s)');
-            if (registrations.length === 0) {
-            console.log('No service workers registered.');
-            }
-            registrations.forEach((registration, i) => {
-            registration.unregister().then((success) => {
-                console.log(`[${i}] Service Worker unregistered:`, success);
-                caches.keys().then((cacheNames) => {
-                cacheNames.forEach((cacheName) => {
-                    caches.delete(cacheName).then((deleted) => {
-                    console.log(`Cache '${cacheName}' deleted:`, deleted);
-                    });
-                });
-                });
-            }).catch((err) => {
-                console.error(`❌ Failed to unregister [${i}]`, err);
-            });
-            });
-        });
-        }
-    </script> -->
-    <script src="js/components.js" defer></script>
+  <script src="js/components.js"></script>
 </body>
 </html>

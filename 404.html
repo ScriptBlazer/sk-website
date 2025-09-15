@@ -4,39 +4,15 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>404 – Page Not Found</title>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=DM+Serif+Text&display=swap" rel="stylesheet">
+
+  <link rel="icon" href="/images/misc/sk-favicon.png" type="image/png">
+  <link rel="preload" as="fetch" href="/images/misc/sk-favicon.png" crossorigin="anonymous">
+  <link rel="stylesheet" href="/css/styles.css" />
+
   <style>
-    :root {
-      --primary-color: #ffffff;
-      --secondary-color: #b3b4b4;
-      --accent-color: #f07f22;
-      --text-color: #ffffff;
-      --light-bg: #1e1e1e;
-      --dark-bg: #3c3b3b;
-      --black-bg: black;
-      --white: #121212;
-      --font-primary: 'Montserrat', sans-serif;
-    }
-
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    body {
-      background-color: black;
-      color: var(--text-color);
-      font-family: var(--font-primary);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      text-align: center;
-      padding: 2rem;
-    }
-
     .container {
+      margin-top: 200px;
+      margin-bottom: 200px;
       max-width: 600px;
     }
 
@@ -94,6 +70,7 @@
   </style>
 </head>
 <body>
+  <div id="header-container"></div>
   <div class="container">
     <div class="error-code">404</div>
     <div class="headline">Oops! Page Not Found</div>
@@ -103,5 +80,7 @@
     </div>
     <a href="/" class="home-link">Back to Home</a>
   </div>
+  <div id="footer-container"></div>
+  <script src="/js/components.js" defer></script>
 </body>
 </html>

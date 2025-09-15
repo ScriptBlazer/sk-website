@@ -5,31 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Social Klick - Video Production Services</title>
 
-    <!-- <script>
-        if ('serviceWorker' in navigator) {
-            navigator.serviceWorker.getRegistrations().then((registrations) => {
-                console.log('found', registrations.length, 'registration(s)');
-                if (registrations.length === 0) {
-                    console.log('No service workers registered.');
-                }
-                registrations.forEach((registration, i) => {
-                    registration.unregister().then((success) => {
-                        console.log(`[${i}] Service Worker unregistered:`, success);
-                        caches.keys().then((cacheNames) => {
-                            cacheNames.forEach((cacheName) => {
-                                caches.delete(cacheName).then((deleted) => {
-                                    console.log(`Cache '${cacheName}' deleted:`, deleted);
-                                });
-                            });
-                        });
-                    }).catch((err) => {
-                        console.error(`❌ Failed to unregister [${i}]`, err);
-                    });
-                });
-            });
-        }
-    </script> -->
-
     <meta name="description" content="Social Klick is a UK-based video production company creating powerful, engaging visuals for businesses and charities. Bring your message to life with cinematic impact.">
     <meta name="keywords" content="video production, social klick, video editing, charity campaigns, promo videos, corporate videos, uk video company">
     <meta name="author" content="Social Klick">
@@ -51,10 +26,6 @@
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
-
-    <link rel="preload" as="video" href="href=https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation%20vids/sk-website-page-vids/color-compressed.mp4" type="video/mp4">
-    <link rel="preload" as="video" href="https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/sk-website-page-vids/Client+reels+landscape+hq.mp4" type="video/mp4">
-    <link rel="preload" as="video" href="https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/sk-website-page-vids/Client+reels+Square" type="video/mp4">
 </head>
 <body>
     <main>
@@ -67,7 +38,7 @@
              /* ---------------------------------------- */ -->
         <section class="hero">
             <video autoplay loop muted playsinline class="hero-video">
-                <source src="https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/sk-website-page-vids/color-compressed.mp4" type="video/mp4">
+                <source src="/videos/color-compressed.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
             <div class="hero-content">
@@ -84,13 +55,13 @@
         <section class="clients-video-section">
             <!-- Desktop video -->
             <video autoplay loop muted playsinline class="clients-video desktop-video">
-                <source src="https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/sk-website-page-vids/Client+reels+landscape+hq.mp4" type="video/mp4">
+                <source src="videos/Client reels landscape hq.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
 
             <!-- Mobile video -->
             <video autoplay loop muted playsinline class="clients-video mobile-video">
-                <source src="https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/sk-website-page-vids/Client+reels+Square.mp4">
+                <source src="videos/Client reels Square.mp4">
                 Your browser does not support the video tag.
             </video>
             <div class="clients-content-overlay">
@@ -151,31 +122,16 @@
     </main>
 
     <div id="footer-container"></div>
-    <!-- <script>
-        if ('serviceWorker' in navigator) {
-        navigator.serviceWorker.getRegistrations().then((registrations) => {
-            console.log('found', registrations.length, 'registration(s)');
-            if (registrations.length === 0) {
-            console.log('No service workers registered.');
-            }
-            registrations.forEach((registration, i) => {
-            registration.unregister().then((success) => {
-                console.log(`[${i}] Service Worker unregistered:`, success);
-                caches.keys().then((cacheNames) => {
-                cacheNames.forEach((cacheName) => {
-                    caches.delete(cacheName).then((deleted) => {
-                    console.log(`Cache '${cacheName}' deleted:`, deleted);
-                    });
-                });
-                });
-            }).catch((err) => {
-                console.error(`❌ Failed to unregister [${i}]`, err);
-            });
-            });
-        });
-        }
-    </script> -->
     <script src="js/hero-animation.js" defer></script>
     <script src="js/components.js" defer></script>
+    <script>
+        if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.getRegistrations().then(function(registrations) {
+            for (let registration of registrations) {
+            registration.unregister();
+            }
+        });
+        }
+    </script>
 </body>
 </html> 
