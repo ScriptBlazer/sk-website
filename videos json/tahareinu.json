@@ -1,5 +1,47 @@
 {
-  "": {
+  "Campaign 2026": {
+    "landscape": [
+      {
+        "title": "What Would I Do?",
+        "video": "https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/client+videos/Tahareinu/campaign+2026/Tahareinu+Campaign+2026+Main+Video.mp4",
+        "thumbnail": "/images/thumbnails/Tahareinu/2026/Tahareinu Campaign 2026 Main Video.jpg",
+        "type": "video"
+      }
+    ],
+    "portrait": [
+        {
+        "title": "Gut Shabbos",
+        "video": "https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/client+videos/Tahareinu/campaign+2026/Erev+Shabbos+video+USA.mp4",
+        "thumbnail": "/images/thumbnails/Tahareinu/2026/Erev Shabbos video USA.jpg",
+        "type": "video"
+        },
+        {
+        "title": "Tomorrow",
+        "video": "https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/client+videos/Tahareinu/campaign+2026/Tomorrow+USA.mp4",
+        "thumbnail": "/images/thumbnails/Tahareinu/2026/Tomorrow USA.jpg",
+        "type": "video"
+        },
+        {
+        "title": "we Are Live",
+        "video": "https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/client+videos/Tahareinu/campaign+2026/We+are+Live+USA.mp4",
+        "thumbnail": "/images/thumbnails/Tahareinu/2026/We are Live USA.jpg",
+        "type": "video"
+        },
+        {
+        "title": "75% Reached",
+        "video": "https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/client+videos/Tahareinu/campaign+2026/75%25+Reached+USA.mp4",
+        "thumbnail": "/images/thumbnails/Tahareinu/2026/75%25 Reached USA.jpg",
+        "type": "video"
+        },
+        {
+        "title": "Goal Reached",
+        "video": "https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/client+videos/Tahareinu/campaign+2026/100%25+Reached+600K+Bonus+IL.mp4",
+        "thumbnail": "/images/thumbnails/Tahareinu/2026/100%25 Reached 600K Bonus IL.jpg",
+        "type": "video"
+        }
+    ]
+  },
+  "Campaign 2025": {
     "landscape": [
       {
         "title": "The Pain",
@@ -47,4 +89,4 @@
         }
     ]
   }
-} 
+}  

@@ -2,6 +2,31 @@
   "":   {
     "portrait": [
             {
+                "title": "Gold & Silver Raffle",
+                "video": "https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/wa-ads/Gold+%26+Silver+Raffle+Global+giveaway.mp4",
+                "thumbnail": "/images/thumbnails/WA Ads/Gold & Silver Raffle Global giveaway.jpg"
+            },
+            {
+                "title": "Feferkorn website launch",
+                "video": "https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/wa-ads/Feferkorn+website+launch.mp4",
+                "thumbnail": "/images/thumbnails/WA Ads/Feferkorn website launch.jpg"
+            },
+            {
+                "title": "Zakopane Recap 2025",
+                "video": "https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/wa-ads/Zakopane+Recap+2025.mp4",
+                "thumbnail": "/images/thumbnails/WA Ads/Zakopane Recap 2025.jpg"
+            },
+            {
+                "title": "Alef Alef chips lines",
+                "video": "https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/wa-ads/Alef+Alef+chips+line.mp4",
+                "thumbnail": "/images/thumbnails/WA Ads/Alef Alef chips line.jpg"
+            },
+            {
+                "title": "Frohwein's Launch ad",
+                "video": "https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/wa-ads/Frohwein's+Launch+ad.mp4",
+                "thumbnail": "/images/thumbnails/WA Ads/Frohwein's Launch ad.jpg"
+            },
+            {
                 "title": "Areivim Awareness",
                 "video": "https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/wa-ads/Areivim+Awareness+Video.mp4",
                 "thumbnail": "/images/thumbnails/WA Ads/Areivim Awareness Video.jpg"

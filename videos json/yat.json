@@ -1,0 +1,92 @@
+{
+  "Campaign 2026": {
+    "landscape": [
+      {
+        "title": "Main Video",
+        "video": "https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/client+videos/YAT/YAT+Campaign+2026+Main+video.mp4",
+        "thumbnail": "/images/thumbnails/YAT/YAT Campaign 2026 Main video.jpg",
+        "type": "video"
+      },
+      {
+        "title": "My Home",
+        "video": "https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/client+videos/YAT/Mechel+Lieber.mp4",
+        "thumbnail": "/images/thumbnails/YAT/Mechel Lieber.jpg",
+        "type": "video"
+      }
+    ],
+    "portrait": [
+      {
+      "title": "Rabbi Yakov Moshe Margulios",
+      "video": "https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/client+videos/YAT/Margulios.mp4",
+      "thumbnail": "/images/thumbnails/YAT/Margulios.jpg",
+      "type": "video"
+      },
+      {
+      "title": "Rabbi Shlomo Usher Tauber",
+      "video": "https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/client+videos/YAT/Tauber.mp4",
+      "thumbnail": "/images/thumbnails/YAT/Tauber.jpg",
+      "type": "video"
+      },
+      {
+      "title": "Shimmy Nowogrodski",
+      "video": "https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/client+videos/YAT/Shimmy+Nowog.mp4",
+      "thumbnail": "/images/thumbnails/YAT/Shimmy Nowog.jpg",
+      "type": "video"
+      },
+      {
+      "title": "Avi Dvir",
+      "video": "https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/client+videos/YAT/Avi+Dvir.mp4",
+      "thumbnail": "/images/thumbnails/YAT/Avi Dvir.jpg",
+      "type": "video"
+      },
+      {
+      "title": "Rabbi Getzi Klein",
+      "video": "https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/client+videos/YAT/Getzi+Klein.mp4",
+      "thumbnail": "/images/thumbnails/YAT/Getzi Klein.jpg",
+      "type": "video"
+      },
+      {
+      "title": "Harav Gedalia Miller",
+      "video": "https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/client+videos/YAT/Miller.mp4",
+      "thumbnail": "/images/thumbnails/YAT/Miller.jpg",
+      "type": "video"
+      },
+      {
+      "title": "We Are Live",
+      "video": "https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/client+videos/YAT/We+are+live.mp4",
+      "thumbnail": "/images/thumbnails/YAT/We are live.jpg",
+      "type": "video"
+      },
+      {
+      "title": "25% Reached",
+      "video": "https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/client+videos/YAT/25%25+Reached.mp4",
+      "thumbnail": "/images/thumbnails/YAT/25%25 Reached.jpg",
+      "type": "video"
+      },
+      {
+      "title": "50% Reached",
+      "video": "https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/client+videos/YAT/50%25+Reached.mp4",
+      "thumbnail": "/images/thumbnails/YAT/50%25 Reached.jpg",
+      "type": "video"
+      },
+      {
+      "title": "75% Reached",
+      "video": "https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/client+videos/YAT/75%25+Reached.mp4",
+      "thumbnail": "/images/thumbnails/YAT/75%25 Reached.jpg",
+      "type": "video"
+      },
+      {
+      "title": "Goal Reached",
+      "video": "https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/client+videos/YAT/100%25+Reached+360K.mp4",
+      "thumbnail": "/images/thumbnails/YAT/100%25 Reached 360K.jpg",
+      "type": "video"
+      },
+      {
+      "title": "Thank You",
+      "video": "https://sam-animation-bucket.s3.eu-north-1.amazonaws.com/Animation+vids/client+videos/YAT/Thank+you.mp4",
+      "thumbnail": "/images/thumbnails/YAT/Thank you.jpg",
+      "type": "video"
+      }
+    ]
+  }
+} 
