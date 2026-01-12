@@ -704,6 +704,17 @@ in a grid use the two below */
     text-align: center;
 }
 
+.credits a {
+    color: var(--text-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.credits a:hover {
+    color: var(--accent-color);
+    text-decoration: underline;
+}
+
 
 
 

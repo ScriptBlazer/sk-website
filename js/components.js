@@ -153,15 +153,90 @@ function initializeHeroAnimation() {
 
 // Adds "active" class to the nav link that matches the current page URL
 function highlightCurrentNavLink() {
-  const currentPage = window.location.pathname.split("/").pop() || "index.html";
+  const currentPath = window.location.pathname;
+  const currentPage = currentPath.split("/").pop() || "index.html";
   const navLinks = document.querySelectorAll(".nav-links a");
 
   navLinks.forEach((link) => {
-    const href = link.getAttribute("href").replace(/^\//, "");
-    if (href === currentPage) {
+    const href = link.getAttribute("href");
+    const hrefPath = href.replace(/^\//, "");
+    
+    // Check for exact page match
+    if (hrefPath === currentPage) {
       link.classList.add("active");
     }
+    // Check for category pages - only highlight if we're on the exact category page, not inner pages
+    else if (hrefPath.includes("corporate")) {
+      // Only active if current path exactly matches the corporate category page
+      if (currentPath === "/portfolio/corporate.html" || currentPath.endsWith("/portfolio/corporate.html")) {
+        link.classList.add("active");
+      }
+    }
+    else if (hrefPath.includes("charity")) {
+      // Only active if current path exactly matches the charity category page
+      if (currentPath === "/portfolio/charity.html" || currentPath.endsWith("/portfolio/charity.html")) {
+        link.classList.add("active");
+      }
+    }
+    else if (hrefPath.includes("whatsapp")) {
+      // Only active if current path exactly matches the whatsapp category page
+      if (currentPath === "/portfolio/whatsapp-videos.html" || currentPath.endsWith("/portfolio/whatsapp-videos.html")) {
+        link.classList.add("active");
+      }
+    }
   });
+}
+
+// Adds category navigation item based on current page location
+function addCategoryNavItem() {
+  const currentPath = window.location.pathname;
+  const navLinks = document.querySelector(".nav-links");
+  
+  if (!navLinks) return;
+  
+  // Check if category nav item already exists
+  const existingCategoryNav = navLinks.querySelector('a[href*="corporate"], a[href*="charity"], a[href*="whatsapp"]');
+  if (existingCategoryNav) return; // Already added
+  
+  // Find the Portfolio link
+  const portfolioLink = Array.from(navLinks.querySelectorAll("a")).find(
+    (link) => {
+      const href = link.getAttribute("href");
+      return href === "/portfolio.html" || href === "portfolio.html" || href.endsWith("portfolio.html");
+    }
+  );
+  
+  if (!portfolioLink) return;
+  
+  const portfolioListItem = portfolioLink.parentElement;
+  
+  // Determine category based on path
+  let categoryName = "";
+  let categoryHref = "";
+  
+  if (currentPath.includes("/corporate") || currentPath.includes("corporate.html")) {
+    categoryName = "Corporate";
+    categoryHref = "/portfolio/corporate.html";
+  } else if (currentPath.includes("/charity") || currentPath.includes("charity.html")) {
+    categoryName = "Charity";
+    categoryHref = "/portfolio/charity.html";
+  } else if (currentPath.includes("whatsapp-videos")) {
+    categoryName = "WhatsApp";
+    categoryHref = "/portfolio/whatsapp-videos.html";
+  }
+  
+  // Only add if we're in a category page
+  if (categoryName && categoryHref) {
+    const categoryListItem = document.createElement("li");
+    const categoryLink = document.createElement("a");
+    categoryLink.href = categoryHref;
+    categoryLink.textContent = categoryName;
+    
+    categoryListItem.appendChild(categoryLink);
+    
+    // Insert after Portfolio, before Contact
+    portfolioListItem.insertAdjacentElement("afterend", categoryListItem);
+  }
 }
 
 // --- Predictive Preloading Logic ---
@@ -289,6 +364,7 @@ document.addEventListener("DOMContentLoaded", () => {
     initializeMobileMenu();
     initializeSmoothScrolling();
     initializeHeroAnimation();
+    addCategoryNavItem();
     highlightCurrentNavLink();
 
     // Attach mouseover listener to navigation links (inside the loaded header)
